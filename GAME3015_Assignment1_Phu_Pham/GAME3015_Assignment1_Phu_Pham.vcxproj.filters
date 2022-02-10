@@ -16,25 +16,10 @@
     <ClCompile Include="Aircraft.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Common\DDSTextureLoader.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="Enemy.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Entity.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="FrameResource.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="GameClass.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Common\GameTimer.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Common\GeometryGenerator.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Wingman.cpp">
@@ -42,6 +27,21 @@
     </ClCompile>
     <ClCompile Include="World.cpp">
       <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GameClass.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\DDSTextureLoader.cpp">
+      <Filter>CommonFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\GeometryGenerator.cpp">
+      <Filter>CommonFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameResource.cpp">
+      <Filter>CommonFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\GameTimer.cpp">
+      <Filter>CommonFiles</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -61,43 +61,43 @@
       <Filter>CommonFiles</Filter>
     </ClInclude>
     <ClInclude Include="Aircraft.h">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\DDSTextureLoader.h">
-      <Filter>Source</Filter>
+      <Filter>Header</Filter>
     </ClInclude>
     <ClInclude Include="Enemy.h">
-      <Filter>Source</Filter>
+      <Filter>Header</Filter>
     </ClInclude>
     <ClInclude Include="Entity.h">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="FrameResource.h">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="GameClass.h">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\GameTimer.h">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\GeometryGenerator.h">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="RenderItem.h">
-      <Filter>Source</Filter>
+      <Filter>Header</Filter>
     </ClInclude>
     <ClInclude Include="SceneNode.h">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\UploadBuffer.h">
-      <Filter>Source</Filter>
+      <Filter>Header</Filter>
     </ClInclude>
     <ClInclude Include="Wingman.h">
-      <Filter>Source</Filter>
+      <Filter>Header</Filter>
     </ClInclude>
     <ClInclude Include="World.h">
-      <Filter>Source</Filter>
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GameClass.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\DDSTextureLoader.h">
+      <Filter>CommonFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\GeometryGenerator.h">
+      <Filter>CommonFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderItem.h">
+      <Filter>CommonFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\UploadBuffer.h">
+      <Filter>CommonFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameResource.h">
+      <Filter>CommonFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\GameTimer.h">
+      <Filter>CommonFiles</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -106,6 +106,9 @@
     </Filter>
     <Filter Include="CommonFiles">
       <UniqueIdentifier>{5fb60074-150d-4756-b16e-0a8457fa7724}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header">
+      <UniqueIdentifier>{4d101d37-27d5-4b5c-aa7e-710337177190}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

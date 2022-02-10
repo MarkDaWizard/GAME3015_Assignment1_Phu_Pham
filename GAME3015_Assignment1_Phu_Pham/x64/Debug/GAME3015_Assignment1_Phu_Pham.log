@@ -11,8 +11,9 @@
   Entity.cpp
   FrameResource.cpp
   GameClass.cpp
-D:\T163 - Game Programming\GAME3015_Assignment1_Phu_Pham\GAME3015_Assignment1_Phu_Pham\GameClass.cpp(364,49): warning C4267: '=': conversion from 'size_t' to 'UINT', possible loss of data
+C:\Users\Asus GM501\Desktop\GAME3015_Assignment1_Phu_Pham-main\GAME3015_Assignment1_Phu_Pham\GameClass.cpp(364,49): warning C4267: '=': conversion from 'size_t' to 'UINT', possible loss of data
   Aircraft.cpp
   World.cpp
   Generating Code...
-  GAME3015_Assignment1_Phu_Pham.vcxproj -> D:\T163 - Game Programming\GAME3015_Assignment1_Phu_Pham\x64\Debug\GAME3015_Assignment1_PhuPham.exe
+  LINK : C:\Users\Asus GM501\Desktop\GAME3015_Assignment1_Phu_Pham-main\x64\Debug\GAME3015_Assignment1_PhuPham.exe not found or not built by the last incremental link; performing full link
+  GAME3015_Assignment1_Phu_Pham.vcxproj -> C:\Users\Asus GM501\Desktop\GAME3015_Assignment1_Phu_Pham-main\x64\Debug\GAME3015_Assignment1_PhuPham.exe
