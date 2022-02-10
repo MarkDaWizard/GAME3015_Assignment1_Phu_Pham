@@ -58,7 +58,7 @@ PROJECT_LOGO           =
 # entered, it will be relative to the location where doxygen was started. If
 # left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = "D:/T163 - Game Programming/GAME3015_Assignment1_Phu_Pham/GAME3015_Assignment1_Phu_Pham"
+OUTPUT_DIRECTORY       = GAME3015_Assignment1_Phu_Pham/Documentation
 
 # If the CREATE_SUBDIRS tag is set to YES then doxygen will create 4096 sub-
 # directories (in 2 levels) under the output directory of each output format and
@@ -874,7 +874,7 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = "D:/T163 - Game Programming/GAME3015_Assignment1_Phu_Pham/GAME3015_Assignment1_Phu_Pham"
+INPUT                  = GAME3015_Assignment1_Phu_Pham
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
