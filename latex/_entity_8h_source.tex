@@ -1,0 +1,24 @@
+\hypertarget{_entity_8h_source}{}\doxysection{Entity.\+h}
+\label{_entity_8h_source}\index{Assignment 1 GAME3015/Entity.h@{Assignment 1 GAME3015/Entity.h}}
+\mbox{\hyperlink{_entity_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_scene_node_8h}{SceneNode.h}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_render_item_8h}{RenderItem.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{keyword}{class }\mbox{\hyperlink{class_entity}{Entity}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_scene_node}{SceneNode}}}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7 \textcolor{keyword}{public}:}
+\DoxyCodeLine{8     std::unique\_ptr<RenderItem> \mbox{\hyperlink{class_entity_a4574994fbafa2623db01891db687ff66}{Ritem}};}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_entity_a472e1690df5fb48c6c7f052e4cb39c78}{setVelocity}}(XMFLOAT3 velocity);}
+\DoxyCodeLine{11     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_entity_a472e1690df5fb48c6c7f052e4cb39c78}{setVelocity}}(\textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y);}
+\DoxyCodeLine{12     XMFLOAT3 \mbox{\hyperlink{class_entity_a4e378e2cd26ade4ab509b675c948a389}{getVelocity}}();}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{private}:}
+\DoxyCodeLine{15     XMFLOAT3 mVelocity;}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \};}
+\DoxyCodeLine{18 }
+
+\end{DoxyCode}
