@@ -1,3 +1,6 @@
-﻿  World.cpp
-C:\Users\Asus GM501\Desktop\GAME3015_Assignment1_Phu_Pham-main\GAME3015_Assignment1_Phu_Pham\World.cpp(136,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-  GAME3015_Assignment1_Phu_Pham.vcxproj -> C:\Users\Asus GM501\Desktop\GAME3015_Assignment1_Phu_Pham-main\x64\Debug\GAME3015_Assignment1_PhuPham.exe
+﻿  GameClass.cpp
+C:\Users\Asus GM501\Desktop\New folder (2)\GAME3015_Assignment1_Phu_Pham-main\GAME3015_Assignment1_Phu_Pham\GameClass.cpp(332,52): warning C4267: '=': conversion from 'size_t' to 'UINT', possible loss of data
+  World.cpp
+C:\Users\Asus GM501\Desktop\New folder (2)\GAME3015_Assignment1_Phu_Pham-main\GAME3015_Assignment1_Phu_Pham\World.cpp(140,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  GAME3015_Assignment1_Phu_Pham.vcxproj -> C:\Users\Asus GM501\Desktop\New folder (2)\GAME3015_Assignment1_Phu_Pham-main\x64\Debug\GAME3015_Assignment1_PhuPham.exe

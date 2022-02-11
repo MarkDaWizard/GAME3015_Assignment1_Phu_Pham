@@ -8,6 +8,7 @@
 #include "Player.h"
 #include "Aircraft.h"
 
+
 /// <summary>
 /// Handles all objects that are built in World
 /// </summary>
@@ -35,6 +36,7 @@ public:
 	Aircraft* Enemy = new Aircraft;
 	//Player
 	Player* player = new Player;
+
 
 	void Build(ID3D12Device* Device, ID3D12GraphicsCommandList* CmdList);
 
