@@ -1,252 +1,176 @@
-//GAME3015-Assignment1-Phu-Pham
-//10/2/2022
-//Name: Phu Pham
-//ID: 101250748
 #include "World.h"
+#include <iostream>
 
-void World::buildWorld()
+World::World()
 {
-	//Player
-	jet->Position = XMFLOAT3(0.0f, 0.1f, -30.0f);
-	jet->Scale = XMFLOAT3(0.2f, 1.0f, 0.2f);
+}
 
-	//Enemies
-	wingman1->Position = XMFLOAT3(10.0f, 0.1f, -35.0f);
-	wingman1->Scale = XMFLOAT3(0.1f, 1.0f, 0.1f);
+World::~World()
+{
+	delete	m_RootNode;
+}
 
-	wingman2->Position = XMFLOAT3(-10.0f, 0.1f, -35.0f);
-	wingman2->Scale = XMFLOAT3(0.1f, 1.0f, 0.1f);
+/// <summary>
+/// Set the game world objects
+/// </summary>
+/// <param name="Device"></param>
+/// <param name="CmdList"></param>
+void World::buildWorld(ID3D12Device* Device, ID3D12GraphicsCommandList* CmdList)
+{
+	m_RootNode = new SceneNode;
 
-	//Trees
-	tree->Position = XMFLOAT3(-20.0f, 1.1f, 10.0f);
-	tree->Scale = XMFLOAT3(0.1f, 1.0f, 0.1f);
+	GeometryGenerator geoGen;
 
-	tree2->Position = XMFLOAT3(-10.0f, 1.1f, -20.0f);
-	tree2->Scale = XMFLOAT3(0.25f, 1.0f, 0.25f);
+	GeometryGenerator::MeshData Quad = geoGen.CreateQuad(-0.5f, 0.5f, 1.f, 1.f, 0.f);
+	UINT gridVertexOffset = 0;
+	UINT gridIndexOffset = 0;
+	SubmeshGeometry QuadSubmesh;
+	QuadSubmesh.IndexCount = (UINT)Quad.Indices32.size();
+	QuadSubmesh.StartIndexLocation = gridIndexOffset;
+	QuadSubmesh.BaseVertexLocation = gridVertexOffset;
 
-	tree3->Position = XMFLOAT3(0.0f, 1.1f, -40.0f);
-	tree3->Scale = XMFLOAT3(0.3f, 1.0f, 0.3f);
+	auto totalVertexCount =
+		Quad.Vertices.size();
 
-	tree4->Position = XMFLOAT3(15.0f, 1.1f, -30.0f);
-	tree4->Scale = XMFLOAT3(0.2f, 1.0f, 0.2f);
+	std::vector<Vertex> vertices(totalVertexCount);
 
-	tree5->Position = XMFLOAT3(20.0f, 1.1f, 0.0f);
-	tree5->Scale = XMFLOAT3(0.4f, 1.0f, 0.4f);
+	UINT k = 0;
+	for (size_t i = 0; i < Quad.Vertices.size(); ++i, ++k)
+	{
+		vertices[k].Pos = Quad.Vertices[i].Position;
+		vertices[k].Normal = Quad.Vertices[i].Normal;
+		vertices[k].TexC = Quad.Vertices[i].TexC;
+	}
 
-	tree6->Position = XMFLOAT3(00.0f, 1.1f, 40.0f);
-	tree6->Scale = XMFLOAT3(0.15f, 1.0f, 0.15f);
+	std::vector<std::uint16_t> indices;
 
-	//Enemies
-	enemy->Position = XMFLOAT3(20.0f, 1.1f, 30.0f);
-	enemy->Scale = XMFLOAT3(0.2f, 1.0f, 0.2f);
+	indices.insert(indices.end(), std::begin(Quad.GetIndices16()), std::end(Quad.GetIndices16()));
 
-	enemy2->Position = XMFLOAT3(-20.0f, 1.1f, 30.0f);
-	enemy2->Scale = XMFLOAT3(0.2f, 1.0f, 0.2f);
+	const UINT vbByteSize = (UINT)vertices.size() * sizeof(Vertex);
+	const UINT ibByteSize = (UINT)indices.size() * sizeof(std::uint16_t);
 
-	auto landRitem = std::make_unique<RenderItem>();
-	XMStoreFloat4x4(&landRitem->World, XMMatrixScaling(2.5f, 1.0f, 2.5f) * XMMatrixTranslation(0.0f, 0.0f, 0.0f));
-	landRitem->ObjCBIndex = 0;
-	landRitem->Mat = mMaterials["LandMat"].get();
-	landRitem->Geo = mGeometries["shapeGeo"].get();
-	//landRitem->World = MathHelper::Identity4x4();
-	landRitem->PrimitiveType = D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
-	landRitem->IndexCount = landRitem->Geo->DrawArgs["Grid"].IndexCount;
-	landRitem->StartIndexLocation = landRitem->Geo->DrawArgs["Grid"].StartIndexLocation;
-	landRitem->BaseVertexLocation = landRitem->Geo->DrawArgs["Grid"].BaseVertexLocation;
-	mRitemLayer[(int)RenderLayer::Opaque].push_back(landRitem.get());
-	mAllRitems.push_back(std::move(landRitem));
+	m_Mesh = std::make_unique<MeshGeometry>();
+	m_Mesh->Name = "Quad";
 
-	//Add player
-	jet->Ritem = std::make_unique<RenderItem>();
-	XMStoreFloat4x4(&jet->Ritem->World, XMMatrixScaling(jet->Scale.x, jet->Scale.y, jet->Scale.z) * XMMatrixTranslation(jet->Position.x, jet->Position.y, jet->Position.z));
-	jet->Ritem->ObjCBIndex = 1;
-	jet->Ritem->Mat = mMaterials["Jet2Mat"].get();
-	jet->Ritem->Geo = mGeometries["shapeGeo"].get();
-	jet->Ritem->PrimitiveType = D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
-	jet->Ritem->IndexCount = jet->Ritem->Geo->DrawArgs["Grid"].IndexCount;
-	jet->Ritem->StartIndexLocation = jet->Ritem->Geo->DrawArgs["Grid"].StartIndexLocation;
-	jet->Ritem->BaseVertexLocation = jet->Ritem->Geo->DrawArgs["Grid"].BaseVertexLocation;
-	mRitemLayer[(int)RenderLayer::Transparent].push_back(jet->Ritem.get());
-	mAllRitems.push_back(std::move(jet->Ritem));
-	AllEntities.push_back(jet);
+	ThrowIfFailed(D3DCreateBlob(vbByteSize, &m_Mesh->VertexBufferCPU));
+	CopyMemory(m_Mesh->VertexBufferCPU->GetBufferPointer(), vertices.data(), vbByteSize);
 
-	//Add wingman1
-	wingman1->Ritem = std::make_unique<RenderItem>();
-	XMStoreFloat4x4(&wingman1->Ritem->World, XMMatrixScaling(wingman1->Scale.x, wingman1->Scale.y, wingman1->Scale.z) * XMMatrixTranslation(wingman1->Position.x, wingman1->Position.y, wingman1->Position.z));
-	wingman1->Ritem->ObjCBIndex = 2;
-	wingman1->Ritem->Mat = mMaterials["Jet2Mat"].get();
-	wingman1->Ritem->Geo = mGeometries["shapeGeo"].get();
-	wingman1->Ritem->PrimitiveType = D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
-	wingman1->Ritem->IndexCount = wingman1->Ritem->Geo->DrawArgs["Grid"].IndexCount;
-	wingman1->Ritem->StartIndexLocation = wingman1->Ritem->Geo->DrawArgs["Grid"].StartIndexLocation;
-	wingman1->Ritem->BaseVertexLocation = wingman1->Ritem->Geo->DrawArgs["Grid"].BaseVertexLocation;
-	mRitemLayer[(int)RenderLayer::Transparent].push_back(wingman1->Ritem.get());
-	mAllRitems.push_back(std::move(wingman1->Ritem));
-	AllEntities.push_back(wingman1);	
+	ThrowIfFailed(D3DCreateBlob(ibByteSize, &m_Mesh->IndexBufferCPU));
+	CopyMemory(m_Mesh->IndexBufferCPU->GetBufferPointer(), indices.data(), ibByteSize);
 
-	//Add wingman2
-	wingman2->Ritem = std::make_unique<RenderItem>();
-	XMStoreFloat4x4(&wingman2->Ritem->World, XMMatrixScaling(wingman2->Scale.x, wingman2->Scale.y, wingman2->Scale.z) * XMMatrixTranslation(wingman2->Position.x, wingman2->Position.y, wingman2->Position.z));
-	wingman2->Ritem->ObjCBIndex = 3;
-	wingman2->Ritem->Mat = mMaterials["Jet2Mat"].get();
-	wingman2->Ritem->Geo = mGeometries["shapeGeo"].get();
-	wingman2->Ritem->PrimitiveType = D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
-	wingman2->Ritem->IndexCount = wingman2->Ritem->Geo->DrawArgs["Grid"].IndexCount;
-	wingman2->Ritem->StartIndexLocation = wingman2->Ritem->Geo->DrawArgs["Grid"].StartIndexLocation;
-	wingman2->Ritem->BaseVertexLocation = wingman2->Ritem->Geo->DrawArgs["Grid"].BaseVertexLocation;
-	mRitemLayer[(int)RenderLayer::Transparent].push_back(wingman2->Ritem.get());
-	mAllRitems.push_back(std::move(wingman2->Ritem));
-	AllEntities.push_back(wingman2);
+	m_Mesh->VertexBufferGPU = d3dUtil::CreateDefaultBuffer(Device,
+		CmdList, vertices.data(), vbByteSize, m_Mesh->VertexBufferUploader);
 
-	//Add Tree1
-	tree->Ritem = std::make_unique<RenderItem>();
-	XMStoreFloat4x4(&tree->Ritem->World, XMMatrixScaling(tree->Scale.x, tree->Scale.y, tree->Scale.z) * XMMatrixTranslation(tree->Position.x, tree->Position.y, tree->Position.z));
-	tree->Ritem->ObjCBIndex = 4;
-	tree->Ritem->Mat = mMaterials["treeMat"].get();
-	tree->Ritem->Geo = mGeometries["shapeGeo"].get();
-	tree->Ritem->PrimitiveType = D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
-	tree->Ritem->IndexCount = tree->Ritem->Geo->DrawArgs["Grid"].IndexCount;
-	tree->Ritem->StartIndexLocation = tree->Ritem->Geo->DrawArgs["Grid"].StartIndexLocation;
-	tree->Ritem->BaseVertexLocation = tree->Ritem->Geo->DrawArgs["Grid"].BaseVertexLocation;
-	mRitemLayer[(int)RenderLayer::Transparent].push_back(tree->Ritem.get());
-	mAllRitems.push_back(std::move(tree->Ritem));
-	AllEntities.push_back(tree);
+	m_Mesh->IndexBufferGPU = d3dUtil::CreateDefaultBuffer(Device,
+		CmdList, indices.data(), ibByteSize, m_Mesh->IndexBufferUploader);
 
-	//Add Tree2
-	tree2->Ritem = std::make_unique<RenderItem>();
-	XMStoreFloat4x4(&tree2->Ritem->World, XMMatrixScaling(tree2->Scale.x, tree2->Scale.y, tree2->Scale.z) * XMMatrixTranslation(tree2->Position.x, tree2->Position.y, tree2->Position.z));
-	tree2->Ritem->ObjCBIndex = 5;
-	tree2->Ritem->Mat = mMaterials["treeMat"].get();
-	tree2->Ritem->Geo = mGeometries["shapeGeo"].get();
-	tree2->Ritem->PrimitiveType = D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
-	tree2->Ritem->IndexCount = tree2->Ritem->Geo->DrawArgs["Grid"].IndexCount;
-	tree2->Ritem->StartIndexLocation = tree2->Ritem->Geo->DrawArgs["Grid"].StartIndexLocation;
-	tree2->Ritem->BaseVertexLocation = tree2->Ritem->Geo->DrawArgs["Grid"].BaseVertexLocation;
-	mRitemLayer[(int)RenderLayer::Transparent].push_back(tree2->Ritem.get());
-	mAllRitems.push_back(std::move(tree2->Ritem));
-	AllEntities.push_back(tree2);
 
-	//Add Tree3
-	tree3->Ritem = std::make_unique<RenderItem>();
-	XMStoreFloat4x4(&tree3->Ritem->World, XMMatrixScaling(tree3->Scale.x, tree3->Scale.y, tree3->Scale.z)* XMMatrixTranslation(tree3->Position.x, tree3->Position.y, tree3->Position.z));
-	tree3->Ritem->ObjCBIndex = 6;
-	tree3->Ritem->Mat = mMaterials["treeMat"].get();
-	tree3->Ritem->Geo = mGeometries["shapeGeo"].get();
-	tree3->Ritem->PrimitiveType = D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
-	tree3->Ritem->IndexCount = tree3->Ritem->Geo->DrawArgs["Grid"].IndexCount;
-	tree3->Ritem->StartIndexLocation = tree3->Ritem->Geo->DrawArgs["Grid"].StartIndexLocation;
-	tree3->Ritem->BaseVertexLocation = tree3->Ritem->Geo->DrawArgs["Grid"].BaseVertexLocation;
-	mRitemLayer[(int)RenderLayer::Transparent].push_back(tree3->Ritem.get());
-	mAllRitems.push_back(std::move(tree3->Ritem));
-	AllEntities.push_back(tree3);
+	m_Mesh->VertexByteStride = sizeof(Vertex);
+	m_Mesh->VertexBufferByteSize = vbByteSize;
+	m_Mesh->IndexFormat = DXGI_FORMAT_R16_UINT;
+	m_Mesh->IndexBufferByteSize = ibByteSize;
 
-	//Add Tree4
-	tree4->Ritem = std::make_unique<RenderItem>();
-	XMStoreFloat4x4(&tree4->Ritem->World, XMMatrixScaling(tree4->Scale.x, tree4->Scale.y, tree4->Scale.z)* XMMatrixTranslation(tree4->Position.x, tree4->Position.y, tree4->Position.z));
-	tree4->Ritem->ObjCBIndex = 7;
-	tree4->Ritem->Mat = mMaterials["treeMat"].get();
-	tree4->Ritem->Geo = mGeometries["shapeGeo"].get();
-	tree4->Ritem->PrimitiveType = D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
-	tree4->Ritem->IndexCount = tree4->Ritem->Geo->DrawArgs["Grid"].IndexCount;
-	tree4->Ritem->StartIndexLocation = tree4->Ritem->Geo->DrawArgs["Grid"].StartIndexLocation;
-	tree4->Ritem->BaseVertexLocation = tree4->Ritem->Geo->DrawArgs["Grid"].BaseVertexLocation;
-	mRitemLayer[(int)RenderLayer::Transparent].push_back(tree4->Ritem.get());
-	mAllRitems.push_back(std::move(tree4->Ritem));
-	AllEntities.push_back(tree4);
+	m_Mesh->DrawArgs["Quad"] = QuadSubmesh;
 
-	//Add Tree5
-	tree5->Ritem = std::make_unique<RenderItem>();
-	XMStoreFloat4x4(&tree5->Ritem->World, XMMatrixScaling(tree5->Scale.x, tree5->Scale.y, tree5->Scale.z)* XMMatrixTranslation(tree5->Position.x, tree5->Position.y, tree5->Position.z));
-	tree5->Ritem->ObjCBIndex = 8;
-	tree5->Ritem->Mat = mMaterials["treeMat"].get();
-	tree5->Ritem->Geo = mGeometries["shapeGeo"].get();
-	tree5->Ritem->PrimitiveType = D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
-	tree5->Ritem->IndexCount = tree5->Ritem->Geo->DrawArgs["Grid"].IndexCount;
-	tree5->Ritem->StartIndexLocation = tree5->Ritem->Geo->DrawArgs["Grid"].StartIndexLocation;
-	tree5->Ritem->BaseVertexLocation = tree5->Ritem->Geo->DrawArgs["Grid"].BaseVertexLocation;
-	mRitemLayer[(int)RenderLayer::Transparent].push_back(tree5->Ritem.get());
-	mAllRitems.push_back(std::move(tree5->Ritem));
-	AllEntities.push_back(tree5);
+	// BACKGROUNDS (2 for scrolling effect)
+	Land->m_Pos = XMFLOAT3(0.f, 0.f, 0.f);
+	Land->m_Scale = XMFLOAT3(130.f, 130.f, 1.f);
+	Land->m_Rot = XMFLOAT3(3.14159f / 2.f, 0.f, 0.f);
+	Land->m_MBIndex = 0;
+	Land->m_TexIndex = 0;
 
-	//Add Tree6
-	tree6->Ritem = std::make_unique<RenderItem>();
-	XMStoreFloat4x4(&tree6->Ritem->World, XMMatrixScaling(tree6->Scale.x, tree6->Scale.y, tree6->Scale.z)* XMMatrixTranslation(tree6->Position.x, tree6->Position.y, tree6->Position.z));
-	tree6->Ritem->ObjCBIndex = 9;
-	tree6->Ritem->Mat = mMaterials["treeMat"].get();
-	tree6->Ritem->Geo = mGeometries["shapeGeo"].get();
-	tree6->Ritem->PrimitiveType = D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
-	tree6->Ritem->IndexCount = tree6->Ritem->Geo->DrawArgs["Grid"].IndexCount;
-	tree6->Ritem->StartIndexLocation = tree6->Ritem->Geo->DrawArgs["Grid"].StartIndexLocation;
-	tree6->Ritem->BaseVertexLocation = tree6->Ritem->Geo->DrawArgs["Grid"].BaseVertexLocation;
-	mRitemLayer[(int)RenderLayer::Transparent].push_back(tree6->Ritem.get());
-	mAllRitems.push_back(std::move(tree6->Ritem));
-	AllEntities.push_back(tree6);
+	m_RootNode->AddChild(Land);
+	m_RenderList.push_back(Land);
 
-	//Add Enemy1
-	enemy->Ritem = std::make_unique<RenderItem>();
-	XMStoreFloat4x4(&enemy->Ritem->World, XMMatrixScaling(enemy->Scale.x, enemy->Scale.y, enemy->Scale.z)* XMMatrixTranslation(enemy->Position.x, enemy->Position.y, enemy->Position.z));
-	enemy->Ritem->ObjCBIndex = 10;
-	enemy->Ritem->Mat = mMaterials["JetMat"].get();
-	enemy->Ritem->Geo = mGeometries["shapeGeo"].get();
-	enemy->Ritem->PrimitiveType = D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
-	enemy->Ritem->IndexCount = enemy->Ritem->Geo->DrawArgs["Grid"].IndexCount;
-	enemy->Ritem->StartIndexLocation = enemy->Ritem->Geo->DrawArgs["Grid"].StartIndexLocation;
-	enemy->Ritem->BaseVertexLocation = enemy->Ritem->Geo->DrawArgs["Grid"].BaseVertexLocation;
-	mRitemLayer[(int)RenderLayer::Transparent].push_back(enemy->Ritem.get());
-	mAllRitems.push_back(std::move(enemy->Ritem));
-	AllEntities.push_back(enemy);
+	Land2->m_Pos = XMFLOAT3(0.f, 0.f, 115.f);
+	Land2->m_Scale = XMFLOAT3(130.f, 130.f, 1.f);
+	Land2->m_Rot = XMFLOAT3(3.14159f / 2.f, 0.f, 0.f);
+	Land2->m_MBIndex = 0;
+	Land2->m_TexIndex = 0;
 
-	//Add Enemy2
-	enemy2->Ritem = std::make_unique<RenderItem>();
-	XMStoreFloat4x4(&enemy2->Ritem->World, XMMatrixScaling(enemy2->Scale.x, enemy2->Scale.y, enemy2->Scale.z)* XMMatrixTranslation(enemy2->Position.x, enemy2->Position.y, enemy2->Position.z));
-	enemy2->Ritem->ObjCBIndex = 11;
-	enemy2->Ritem->Mat = mMaterials["JetMat"].get();
-	enemy2->Ritem->Geo = mGeometries["shapeGeo"].get();
-	enemy2->Ritem->PrimitiveType = D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
-	enemy2->Ritem->IndexCount = enemy2->Ritem->Geo->DrawArgs["Grid"].IndexCount;
-	enemy2->Ritem->StartIndexLocation = enemy2->Ritem->Geo->DrawArgs["Grid"].StartIndexLocation;
-	enemy2->Ritem->BaseVertexLocation = enemy2->Ritem->Geo->DrawArgs["Grid"].BaseVertexLocation;
-	mRitemLayer[(int)RenderLayer::Transparent].push_back(enemy2->Ritem.get());
-	mAllRitems.push_back(std::move(enemy2->Ritem));
-	AllEntities.push_back(enemy2);
+	m_RootNode->AddChild(Land2);
+	m_RenderList.push_back(Land2);
+
+	// ENEMY Character
+	Enemy->m_Pos = XMFLOAT3(0.f, 10.f, 15.f);
+	Enemy->m_Scale = XMFLOAT3(5.f, 5.f, 1.f);
+	Enemy->m_Rot = XMFLOAT3(3.14159f / 2.f, 0.f, 0.f);
+	Enemy->m_MBIndex = 2;
+	Enemy->m_TexIndex = 2;
+
+	m_RootNode->AddChild(Enemy);
+	m_RenderList.push_back(Enemy);
+
+	// PLAYER character
+	player->m_Pos = XMFLOAT3(0.f, 10.f, -10.f);
+	player->m_Scale = XMFLOAT3(10.f, 10.f, 1.f);
+	player->m_Rot = XMFLOAT3(3.14159f / 2.f, 0.f, 0.f);
+	player->m_MBIndex = 1;
+	player->m_TexIndex = 1;
+
+	m_RootNode->AddChild(player);
+	m_RenderList.push_back(player);
 
 }
 
-
-void World::Update(const GameTimer& gt)
+/// <summary>
+/// Update root node and scroll the background
+/// </summary>
+/// <param name="DeltaTime"></param>
+/// <param name="Frame"></param>
+void World::Update(float DeltaTime, struct FrameResource* Frame)
 {
-	//Updating movement for player, wingmans and enemies
-	jet->Update(gt);
-	wingman1->Update(gt);
-	wingman2->Update(gt);
-	enemy->Update(gt);
-	enemy2->Update(gt);
+	m_RootNode->m_GlobalCBIndex = 0;
+	m_RootNode->Update(DeltaTime, Frame);
 
-	jet->Ritem = std::make_unique<RenderItem>();
-	XMStoreFloat4x4(&jet->Ritem->World, XMMatrixScaling(jet->Scale.x, jet->Scale.y, jet->Scale.z) * XMMatrixTranslation(jet->Position.x, jet->Position.y, jet->Position.z));
-	jet->Ritem->ObjCBIndex = 1;
-	mAllRitems.push_back(std::move(jet->Ritem));
+	// Slide the background
+	int m_Dir = -1.f;
+	Land->m_Pos.z += 10.f * m_Dir * DeltaTime;
+	Land2->m_Pos.z += 10.f * m_Dir * DeltaTime;
 
-	wingman1->Ritem = std::make_unique<RenderItem>();
-	XMStoreFloat4x4(&wingman1->Ritem->World, XMMatrixScaling(wingman1->Scale.x, wingman1->Scale.y, wingman1->Scale.z) * XMMatrixTranslation(wingman1->Position.x, wingman1->Position.y, wingman1->Position.z));
-	wingman1->Ritem->ObjCBIndex = 2;
-	mAllRitems.push_back(std::move(wingman1->Ritem));
+	// Move background before the screen if off the screen
+	if (Land->m_Pos.z < -125)
+	{
+		Land->m_Pos.z = 120;
+	}
+	if (Land2->m_Pos.z < -125)
+	{
+		Land2->m_Pos.z = 120;
+	}
 
+}
 
-	wingman2->Ritem = std::make_unique<RenderItem>();
-	XMStoreFloat4x4(&wingman2->Ritem->World, XMMatrixScaling(wingman2->Scale.x, wingman2->Scale.y, wingman2->Scale.z) * XMMatrixTranslation(wingman2->Position.x, wingman2->Position.y, wingman2->Position.z));
-	wingman2->Ritem->ObjCBIndex = 3;
-	mAllRitems.push_back(std::move(wingman2->Ritem));
+void World::Draw(ID3D12GraphicsCommandList* CmdList, ID3D12DescriptorHeap* Desc,
+	UINT DescSize, struct FrameResource* Frame, float DeltaTime)
+{
+	UINT objCBByteSize = d3dUtil::CalcConstantBufferByteSize(sizeof(ObjectConstants));
+	UINT matCBByteSize = d3dUtil::CalcConstantBufferByteSize(sizeof(MaterialConstants));
 
-	enemy->Ritem = std::make_unique<RenderItem>();
-	XMStoreFloat4x4(&enemy->Ritem->World, XMMatrixScaling(enemy->Scale.x, enemy->Scale.y, enemy->Scale.z) * XMMatrixTranslation(enemy->Position.x, enemy->Position.y, enemy->Position.z));
-	enemy->Ritem->ObjCBIndex = 10;
-	mAllRitems.push_back(std::move(enemy->Ritem));
+	auto objectCB = Frame->ObjectCB->Resource();
+	auto matCB = Frame->MaterialCB->Resource();
 
+	auto	iter = m_RenderList.begin();
+	auto	iterEnd = m_RenderList.end();
 
-	enemy2->Ritem = std::make_unique<RenderItem>();
-	XMStoreFloat4x4(&enemy2->Ritem->World, XMMatrixScaling(enemy2->Scale.x, enemy2->Scale.y, enemy2->Scale.z) * XMMatrixTranslation(enemy2->Position.x, enemy2->Position.y, enemy2->Position.z));
-	enemy2->Ritem->ObjCBIndex = 11;
-	mAllRitems.push_back(std::move(enemy2->Ritem));
+	for (; iter != iterEnd; ++iter)
+	{
+		CmdList->IASetVertexBuffers(0, 1, &m_Mesh->VertexBufferView());
+		CmdList->IASetIndexBuffer(&m_Mesh->IndexBufferView());
+		CmdList->IASetPrimitiveTopology(D3D10_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 
+		CD3DX12_GPU_DESCRIPTOR_HANDLE tex(
+			Desc->GetGPUDescriptorHandleForHeapStart()
+			);
+
+		tex.Offset((*iter)->GetTexIndex(), DescSize);
+
+		D3D12_GPU_VIRTUAL_ADDRESS objCBAddress = objectCB->GetGPUVirtualAddress() + (*iter)->m_CBIndex * objCBByteSize;
+		D3D12_GPU_VIRTUAL_ADDRESS matCBAddress = matCB->GetGPUVirtualAddress() + (*iter)->m_MBIndex * matCBByteSize;
+
+		CmdList->SetGraphicsRootDescriptorTable(0, tex);
+		CmdList->SetGraphicsRootConstantBufferView(1, objCBAddress);
+		CmdList->SetGraphicsRootConstantBufferView(3, matCBAddress);
+
+		CmdList->DrawIndexedInstanced(6, 1, 0, 0, 0);
+	}
 }

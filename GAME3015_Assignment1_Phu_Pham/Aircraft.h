@@ -1,18 +1,22 @@
-//GAME3015-Assignment1-Phu-Pham
-//10/2/2022
-//Name: Phu Pham
-//ID: 101250748
 #pragma once
+
 #include "Entity.h"
-#include "Common/d3dUtil.h"
-#include "Common/GameTimer.h"
-class Aircraft : public Entity
+
+/// <summary>
+/// A plane that will act as an enemy character
+/// </summary>
+class Aircraft	:
+	public Entity
 {
 public:
-	Aircraft() {};
-	Aircraft(XMFLOAT3 position, XMFLOAT3 scale);
-	void Move(const GameTimer& gt);
+	Aircraft();
+	~Aircraft();
 
-	void Update(const GameTimer& gt);
+private:
+	float	m_Dir;
+
+public:
+	virtual void Update(float DeltaTime, struct FrameResource* Frame);
+	virtual void Draw(ID3D12GraphicsCommandList* CmdList, float DeltaTime);
 };
 

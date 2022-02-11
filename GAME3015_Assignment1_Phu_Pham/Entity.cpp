@@ -1,21 +1,21 @@
 #include "Entity.h"
 
+Entity::Entity()	:
+	m_MoveSpeed(1.f)
+{
+	m_Render = true;
+}
 
-	void Entity::setVelocity(XMFLOAT3 velocity) 
-	{
-		mVelocity = velocity; 
-	}
+Entity::~Entity()
+{
+}
 
-	void Entity::setVelocity(float x, float y) 
-	{ 
-		mVelocity.x = x, mVelocity.y = y; 
-	}
+void Entity::Update(float DeltaTime, struct FrameResource* Frame)
+{
+	SceneNode::Update(DeltaTime, Frame);
+}
 
-	XMFLOAT3 Entity::getVelocity() 
-	{ 
-		return mVelocity;
-	}
-
-
-
-
+void Entity::Draw(ID3D12GraphicsCommandList* CmdList, float DeltaTime)
+{
+	SceneNode::Draw(CmdList, DeltaTime);
+}

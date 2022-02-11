@@ -1,18 +1,24 @@
 #pragma once
 #include "SceneNode.h"
-#include <memory>
-#include "RenderItem.h"
-class Entity : public SceneNode
+#include "FrameResource.h"
+
+/// <summary>
+/// Game elements in the world.
+/// </summary>
+class Entity	:
+	public SceneNode
 {
+	friend class World;
+
 public:
-	std::unique_ptr<RenderItem> Ritem;
+	Entity();
+	~Entity();
+		
+protected:
+	float	m_MoveSpeed;
 
-	void setVelocity(XMFLOAT3 velocity);
-	void setVelocity(float x, float y);
-	XMFLOAT3 getVelocity();
-
-private:
-	XMFLOAT3 mVelocity;
-
+public:
+	virtual void Update(float DeltaTime, struct FrameResource* Frame);
+	virtual void Draw(ID3D12GraphicsCommandList* CmdList, float DeltaTime);
 };
 

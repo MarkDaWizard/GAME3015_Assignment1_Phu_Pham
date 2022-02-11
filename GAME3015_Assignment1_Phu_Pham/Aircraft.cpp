@@ -1,44 +1,35 @@
-//GAME3015-Assignment1-Phu-Pham
-//10/2/2022
-//Name: Phu Pham
-//ID: 101250748
 #include "Aircraft.h"
 
-Aircraft::Aircraft(XMFLOAT3 position, XMFLOAT3 scale)
+Aircraft::Aircraft()
 {
-	Position = position;
-	Scale = scale;
-
+	m_MoveSpeed = 50.f;
+	m_Dir = 1.f;
 }
 
-void Aircraft::Move(const GameTimer& gt)
+Aircraft::~Aircraft()
 {
-	// W key for moving up
-	if (d3dUtil::IsKeyDown(0x57))
+}
+
+void Aircraft::Update(float DeltaTime, FrameResource* Frame)
+{
+	Entity::Update(DeltaTime, Frame);
+
+	m_Pos.x += m_MoveSpeed * m_Dir * DeltaTime;
+
+	if (m_Pos.x >= 45.f)
 	{
-		Position.z += 0.5f;
+		m_Pos.x = 45.f;
+		m_Dir = -1.f;
 	}
 
-	// A key for moving left
-	if (d3dUtil::IsKeyDown(0x41))
+	else if (m_Pos.x <= -45.f)
 	{
-		Position.x -= 0.5f;
-	}
-
-	// S key for moving down
-	if (d3dUtil::IsKeyDown(0x53))
-	{
-		Position.z -= 0.5f;
-	}
-
-	// D key for moving right
-	if (d3dUtil::IsKeyDown(0x44))
-	{
-		Position.x += 0.5f;
+		m_Pos.x = -45.f;
+		m_Dir = 1.f;
 	}
 }
 
-void Aircraft::Update(const GameTimer& gt)
+void Aircraft::Draw(ID3D12GraphicsCommandList* CmdList, float DeltaTime)
 {
-	Move(gt);
+	Entity::Draw(CmdList, DeltaTime);
 }

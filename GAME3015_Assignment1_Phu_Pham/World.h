@@ -1,47 +1,36 @@
 #pragma once
-#include <string>
-#include <map>
-#include <vector>
+
+#include "Entity.h"
+#include "Player.h"
 #include "Aircraft.h"
-#include "Wingman.h"
-//GAME3015-Assignment1-Phu-Pham
-//10/2/2022
-//Name: Phu Pham
-//ID: 101250748
-#include "Enemy.h"
+
+/// <summary>
+/// World.h and World.cpp scripts are where the game scene is built and rendered.
+/// </summary>
+
 class World
 {
 public:
-	std::vector<Entity*> AllEntities;
+	World();
+	~World();
 
-	std::map<std::string, std::unique_ptr<MeshGeometry>> mGeometries;
+public:
+	SceneNode* m_RootNode;
+
 	std::map<std::string, std::unique_ptr<Material>> mMaterials;
+	std::list<SceneNode*>	m_RenderList;
+	std::unique_ptr<MeshGeometry>	m_Mesh;
 
-	// List of all the render items.
-	std::vector<std::unique_ptr<RenderItem>> mAllRitems;
-	// Render items divided by PSO.
-	std::vector<RenderItem*> mRitemLayer[(int)RenderLayer::Count];
+	Entity* Land = new Entity;
+	Entity* Land2 = new Entity;
 
-	//Player Class
-	Aircraft* jet = new Aircraft();
+	Aircraft* Enemy = new Aircraft;
+	Player* player = new Player;
 
-	//Wingman Class
-	Wingman* wingman1 = new Wingman();
-	Wingman* wingman2 = new Wingman();
+	void buildWorld(ID3D12Device* Device, ID3D12GraphicsCommandList* CmdList);
 
-	//Enemy Class
-	Enemy* enemy = new Enemy();
-	Enemy* enemy2 = new Enemy();
-
-	// Reusing wingman class for trees
-	Wingman* tree = new Wingman();
-	Wingman* tree2 = new Wingman();
-	Wingman* tree3 = new Wingman();
-	Wingman* tree4 = new Wingman();
-	Wingman* tree5 = new Wingman();
-	Wingman* tree6 = new Wingman();
-	void buildWorld();
-
-	void Update(const GameTimer& gt);
+	void Update(float DeltaTime, struct FrameResource* Frame);
+	void Draw(ID3D12GraphicsCommandList* CmdList, ID3D12DescriptorHeap* Desc,
+		UINT DescSize, struct FrameResource* Frame, float DeltaTime);
 };
 

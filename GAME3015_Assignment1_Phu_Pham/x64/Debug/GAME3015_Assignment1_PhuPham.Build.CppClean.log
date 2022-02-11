@@ -1,19 +1,27 @@
-d:\t163 - game programming\game3015_assignment1_phu_pham\game3015_assignment1_phu_pham\x64\debug\aircraft.obj
-d:\t163 - game programming\game3015_assignment1_phu_pham\game3015_assignment1_phu_pham\x64\debug\camera.obj
-d:\t163 - game programming\game3015_assignment1_phu_pham\game3015_assignment1_phu_pham\x64\debug\d3dapp.obj
-d:\t163 - game programming\game3015_assignment1_phu_pham\game3015_assignment1_phu_pham\x64\debug\d3dutil.obj
-d:\t163 - game programming\game3015_assignment1_phu_pham\game3015_assignment1_phu_pham\x64\debug\ddstextureloader.obj
-d:\t163 - game programming\game3015_assignment1_phu_pham\game3015_assignment1_phu_pham\x64\debug\enemy.obj
-d:\t163 - game programming\game3015_assignment1_phu_pham\game3015_assignment1_phu_pham\x64\debug\entity.obj
-d:\t163 - game programming\game3015_assignment1_phu_pham\game3015_assignment1_phu_pham\x64\debug\frameresource.obj
-d:\t163 - game programming\game3015_assignment1_phu_pham\game3015_assignment1_phu_pham\x64\debug\gameclass.obj
-d:\t163 - game programming\game3015_assignment1_phu_pham\game3015_assignment1_phu_pham\x64\debug\gametimer.obj
-d:\t163 - game programming\game3015_assignment1_phu_pham\game3015_assignment1_phu_pham\x64\debug\geometrygenerator.obj
-d:\t163 - game programming\game3015_assignment1_phu_pham\game3015_assignment1_phu_pham\x64\debug\mathhelper.obj
-d:\t163 - game programming\game3015_assignment1_phu_pham\game3015_assignment1_phu_pham\x64\debug\wingman.obj
-d:\t163 - game programming\game3015_assignment1_phu_pham\game3015_assignment1_phu_pham\x64\debug\world.obj
-d:\t163 - game programming\game3015_assignment1_phu_pham\game3015_assignment1_phu_pham\x64\debug\game3015_assignment1_phupham.ilk
-d:\t163 - game programming\game3015_assignment1_phu_pham\game3015_assignment1_phu_pham\x64\debug\vc142.idb
-d:\t163 - game programming\game3015_assignment1_phu_pham\game3015_assignment1_phu_pham\x64\debug\vc142.pdb
-d:\t163 - game programming\game3015_assignment1_phu_pham\x64\debug\game3015_assignment1_phupham.pdb
-d:\t163 - game programming\game3015_assignment1_phu_pham\x64\debug\game3015_assignment1_phupham.exe
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\vc142.pdb
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\vc142.idb
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\frameresource.obj
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\entity.obj
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\scenenode.obj
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\player.obj
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\aircraft.obj
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\mathhelper.obj
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\geometrygenerator.obj
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\gametimer.obj
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\ddstextureloader.obj
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\d3dutil.obj
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\d3dapp.obj
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\camera.obj
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\world.obj
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\gameclass.obj
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\x64\debug\game3015_assignment1_phupham.exe
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\game3015_assignment1_phupham.ilk
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\x64\debug\game3015_assignment1_phupham.pdb
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\game.obj
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\game3015_a1_lamhong.ilk
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\game3015.58e71a3b.tlog\cl.command.1.tlog
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\game3015.58e71a3b.tlog\cl.read.1.tlog
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\game3015.58e71a3b.tlog\cl.write.1.tlog
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\game3015.58e71a3b.tlog\link.command.1.tlog
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\game3015.58e71a3b.tlog\link.read.1.tlog
+c:\users\asus gm501\desktop\game3015_assignment1_phu_pham-main\game3015_assignment1_phu_pham\x64\debug\game3015.58e71a3b.tlog\link.write.1.tlog
