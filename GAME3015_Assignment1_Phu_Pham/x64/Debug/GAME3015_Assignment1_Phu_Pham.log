@@ -1,6 +1,18 @@
-﻿  GameClass.cpp
-C:\Users\Asus GM501\Desktop\New folder (2)\GAME3015_Assignment1_Phu_Pham-main\GAME3015_Assignment1_Phu_Pham\GameClass.cpp(332,52): warning C4267: '=': conversion from 'size_t' to 'UINT', possible loss of data
+﻿  Camera.cpp
+  d3dApp.cpp
+  d3dUtil.cpp
+  DDSTextureLoader.cpp
+  GameTimer.cpp
+  GeometryGenerator.cpp
+  MathHelper.cpp
+  Aircraft.cpp
+  Player.cpp
+  SceneNode.cpp
+  Entity.cpp
+  FrameResource.cpp
+  GameClass.cpp
+D:\T163 - Game Programming\Engine Dev 2\GAME3015_Assignment1_Phu_Pham\GAME3015_Assignment1_Phu_Pham\GameClass.cpp(332,52): warning C4267: '=': conversion from 'size_t' to 'UINT', possible loss of data
   World.cpp
-C:\Users\Asus GM501\Desktop\New folder (2)\GAME3015_Assignment1_Phu_Pham-main\GAME3015_Assignment1_Phu_Pham\World.cpp(140,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\T163 - Game Programming\Engine Dev 2\GAME3015_Assignment1_Phu_Pham\GAME3015_Assignment1_Phu_Pham\World.cpp(140,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   Generating Code...
-  GAME3015_Assignment1_Phu_Pham.vcxproj -> C:\Users\Asus GM501\Desktop\New folder (2)\GAME3015_Assignment1_Phu_Pham-main\x64\Debug\GAME3015_Assignment1_PhuPham.exe
+  GAME3015_Assignment1_Phu_Pham.vcxproj -> D:\T163 - Game Programming\Engine Dev 2\GAME3015_Assignment1_Phu_Pham\x64\Debug\GAME3015_Assignment1_PhuPham.exe

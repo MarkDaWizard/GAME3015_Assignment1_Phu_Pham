@@ -83,7 +83,7 @@ void World::Build(ID3D12Device* Device, ID3D12GraphicsCommandList* CmdList)
 	m_RootNode->AddChild(Terrain1);
 	m_RenderList.push_back(Terrain1);
 
-	Terrain2->m_Pos = XMFLOAT3(0.f, 0.f, 110.f);
+	Terrain2->m_Pos = XMFLOAT3(0.f, 0.f, 116.f);
 	Terrain2->m_Scale = XMFLOAT3(115.f, 130.f, 1.f);
 	Terrain2->m_Rot = XMFLOAT3(3.14159f / 2.f, 0.f, 0.f);
 	Terrain2->m_MBIndex = 0;
