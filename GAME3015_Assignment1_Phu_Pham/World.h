@@ -21,8 +21,12 @@ public:
 	std::list<SceneNode*>	m_RenderList;
 	std::unique_ptr<MeshGeometry>	m_Mesh;
 
-	Entity* Land = new Entity;
-	Entity* Land2 = new Entity;
+	Entity* Terrain1= new Entity;
+	Entity* Terrain2 = new Entity;
+
+
+	Entity* Wingman1 = new Player;
+	Entity* Wingman2 = new Player;
 
 	Aircraft* Enemy = new Aircraft;
 	Player* player = new Player;

@@ -73,23 +73,34 @@ void World::buildWorld(ID3D12Device* Device, ID3D12GraphicsCommandList* CmdList)
 	m_Mesh->DrawArgs["Quad"] = QuadSubmesh;
 
 	// BACKGROUNDS (2 for scrolling effect)
-	Land->m_Pos = XMFLOAT3(0.f, 0.f, 0.f);
-	Land->m_Scale = XMFLOAT3(130.f, 130.f, 1.f);
-	Land->m_Rot = XMFLOAT3(3.14159f / 2.f, 0.f, 0.f);
-	Land->m_MBIndex = 0;
-	Land->m_TexIndex = 0;
+	Terrain1->m_Pos = XMFLOAT3(0.f, 0.f, 0.f);
+	Terrain1->m_Scale = XMFLOAT3(110.f, 130.f, 1.f);
+	Terrain1->m_Rot = XMFLOAT3(3.14159f / 2.f, 0.f, 0.f);
+	Terrain1->m_MBIndex = 0;
+	Terrain1->m_TexIndex = 0;
 
-	m_RootNode->AddChild(Land);
-	m_RenderList.push_back(Land);
+	m_RootNode->AddChild(Terrain1);
+	m_RenderList.push_back(Terrain1);
 
-	Land2->m_Pos = XMFLOAT3(0.f, 0.f, 115.f);
-	Land2->m_Scale = XMFLOAT3(130.f, 130.f, 1.f);
-	Land2->m_Rot = XMFLOAT3(3.14159f / 2.f, 0.f, 0.f);
-	Land2->m_MBIndex = 0;
-	Land2->m_TexIndex = 0;
+	Terrain2->m_Pos = XMFLOAT3(0.f, 0.f, 115.f);
+	Terrain2->m_Scale = XMFLOAT3(110.f, 130.f, 1.f);
+	Terrain2->m_Rot = XMFLOAT3(3.14159f / 2.f, 0.f, 0.f);
+	Terrain2->m_MBIndex = 0;
+	Terrain2->m_TexIndex = 0;
 
-	m_RootNode->AddChild(Land2);
-	m_RenderList.push_back(Land2);
+	m_RootNode->AddChild(Terrain2);
+	m_RenderList.push_back(Terrain2);
+
+	// PLAYER character
+	player->m_Pos = XMFLOAT3(0.f, 10.f, -10.f);
+	player->m_Scale = XMFLOAT3(10.f, 10.f, 1.f);
+	player->m_Rot = XMFLOAT3(3.14159f / 2.f, 0.f, 0.f);
+	player->m_MBIndex = 1;
+	player->m_TexIndex = 1;
+
+	m_RootNode->AddChild(player);
+	m_RenderList.push_back(player);
+
 
 	// ENEMY Character
 	Enemy->m_Pos = XMFLOAT3(0.f, 10.f, 15.f);
@@ -101,15 +112,25 @@ void World::buildWorld(ID3D12Device* Device, ID3D12GraphicsCommandList* CmdList)
 	m_RootNode->AddChild(Enemy);
 	m_RenderList.push_back(Enemy);
 
-	// PLAYER character
-	player->m_Pos = XMFLOAT3(0.f, 10.f, -10.f);
-	player->m_Scale = XMFLOAT3(10.f, 10.f, 1.f);
-	player->m_Rot = XMFLOAT3(3.14159f / 2.f, 0.f, 0.f);
-	player->m_MBIndex = 1;
-	player->m_TexIndex = 1;
+	// WINGMAN1 Character
+	Wingman1->m_Pos = XMFLOAT3(-10.f, 10.f, -15.f);
+	Wingman1->m_Scale = XMFLOAT3(5.f, 5.f, 1.f);
+	Wingman1->m_Rot = XMFLOAT3(3.14159f / 2.f, 0.f, 0.f);
+	Wingman1->m_MBIndex = 3;
+	Wingman1->m_TexIndex = 1;
 
-	m_RootNode->AddChild(player);
-	m_RenderList.push_back(player);
+	player->AddChild(Wingman1);
+	m_RenderList.push_back(Wingman1);
+
+	// WINGMAN2 Character
+	Wingman2->m_Pos = XMFLOAT3(10.f, 10.f, -15.f);
+	Wingman2->m_Scale = XMFLOAT3(5.f, 5.f, 1.f);
+	Wingman2->m_Rot = XMFLOAT3(3.14159f / 2.f, 0.f, 0.f);
+	Wingman2->m_MBIndex = 3;
+	Wingman2->m_TexIndex = 1;
+
+	player->AddChild(Wingman2);
+	m_RenderList.push_back(Wingman2);
 
 }
 
@@ -125,17 +146,17 @@ void World::Update(float DeltaTime, struct FrameResource* Frame)
 
 	// Slide the background
 	int m_Dir = -1.f;
-	Land->m_Pos.z += 10.f * m_Dir * DeltaTime;
-	Land2->m_Pos.z += 10.f * m_Dir * DeltaTime;
+	Terrain1->m_Pos.z += 10.f * m_Dir * DeltaTime;
+	Terrain2->m_Pos.z += 10.f * m_Dir * DeltaTime;
 
 	// Move background before the screen if off the screen
-	if (Land->m_Pos.z < -125)
+	if (Terrain1->m_Pos.z < -125)
 	{
-		Land->m_Pos.z = 120;
+		Terrain1->m_Pos.z = 120;
 	}
-	if (Land2->m_Pos.z < -125)
+	if (Terrain2->m_Pos.z < -125)
 	{
-		Land2->m_Pos.z = 120;
+		Terrain2->m_Pos.z = 120;
 	}
 
 }

@@ -10,6 +10,29 @@ Player::~Player()
 
 void Player::Update(float DeltaTime, FrameResource* Frame)
 {
+	// W key for moving up
+	if (d3dUtil::IsKeyDown(0x57))
+	{
+		m_Pos.z += 0.5f;
+	}
+
+	// A key for moving left
+	if (d3dUtil::IsKeyDown(0x41))
+	{
+		m_Pos.x -= 0.5f;
+	}
+
+	// S key for moving down
+	if (d3dUtil::IsKeyDown(0x53))
+	{
+		m_Pos.z -= 0.5f;
+	}
+
+	// D key for moving right
+	if (d3dUtil::IsKeyDown(0x44))
+	{
+		m_Pos.x += 0.5f;
+	}
 	Entity::Update(DeltaTime, Frame);
 }
 

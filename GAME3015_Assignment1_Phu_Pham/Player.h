@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Entity.h"
-
 /// <summary>
 /// Player character that will be controllable by the user. Currently, inputs are in progress
 /// </summary>
