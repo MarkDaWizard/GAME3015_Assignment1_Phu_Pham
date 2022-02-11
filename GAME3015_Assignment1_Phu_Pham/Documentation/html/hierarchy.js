@@ -2,6 +2,7 @@ var hierarchy =
 [
     [ "Camera", "class_camera.html", null ],
     [ "D3DApp", "class_d3_d_app.html", [
+      [ "Game", "class_game.html", null ],
       [ "Game", "class_game.html", null ]
     ] ],
     [ "d3dUtil", "classd3d_util.html", null ],
@@ -24,7 +25,7 @@ var hierarchy =
     [ "SceneNode", "class_scene_node.html", [
       [ "Entity", "class_entity.html", [
         [ "Aircraft", "class_aircraft.html", null ],
-        [ "Enemy", "class_enemy.html", null ],
+        [ "Player", "class_player.html", null ],
         [ "Wingman", "class_wingman.html", null ]
       ] ]
     ] ],

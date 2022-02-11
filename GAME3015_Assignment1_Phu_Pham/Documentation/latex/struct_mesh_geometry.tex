@@ -11,6 +11,8 @@ D3\+D12\+\_\+\+VERTEX\+\_\+\+BUFFER\+\_\+\+VIEW \mbox{\hyperlink{struct_mesh_geo
 \item 
 D3\+D12\+\_\+\+INDEX\+\_\+\+BUFFER\+\_\+\+VIEW \mbox{\hyperlink{struct_mesh_geometry_a93ffd50cd07c380b0cade539ba82e8a5}{Index\+Buffer\+View}} () const
 \item 
+D3\+D12\+\_\+\+VERTEX\+\_\+\+BUFFER\+\_\+\+VIEW \mbox{\hyperlink{struct_mesh_geometry_a249c29b781bbed54661c76f9c4342dcc}{Color\+Buffer\+View}} () const
+\item 
 void \mbox{\hyperlink{struct_mesh_geometry_aba9e36f1f4439a88bed25a48cc337ece}{Dispose\+Uploaders}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
@@ -22,13 +24,19 @@ Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+DBlob $>$ \mbox{\hyperlink{struct_mesh_
 \item 
 Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+DBlob $>$ \mbox{\hyperlink{struct_mesh_geometry_aa9a4e934b370f9c716217b01c15bad32}{Index\+Buffer\+CPU}} = nullptr
 \item 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+DBlob $>$ \mbox{\hyperlink{struct_mesh_geometry_a281ef611d2f40f2baa0993134c6a14d7}{Color\+Buffer\+CPU}} = nullptr
+\item 
 Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D12\+Resource $>$ \mbox{\hyperlink{struct_mesh_geometry_afc3be274ba79e6984225407560350438}{Vertex\+Buffer\+GPU}} = nullptr
 \item 
 Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D12\+Resource $>$ \mbox{\hyperlink{struct_mesh_geometry_a98d981b7fd0627dbe53c31ce83d23d8f}{Index\+Buffer\+GPU}} = nullptr
 \item 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D12\+Resource $>$ \mbox{\hyperlink{struct_mesh_geometry_a0e4b64b879b617fb5eabc824bb5dedb6}{Color\+Buffer\+GPU}} = nullptr
+\item 
 Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D12\+Resource $>$ \mbox{\hyperlink{struct_mesh_geometry_a99726cbb8b6acc9599ccaae768032104}{Vertex\+Buffer\+Uploader}} = nullptr
 \item 
 Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D12\+Resource $>$ \mbox{\hyperlink{struct_mesh_geometry_a49a2735dd265091e5451c26c7e4fceb9}{Index\+Buffer\+Uploader}} = nullptr
+\item 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D12\+Resource $>$ \mbox{\hyperlink{struct_mesh_geometry_ae9e4ca59e40ccbae59680a6726457a94}{Color\+Buffer\+Uploader}} = nullptr
 \item 
 UINT \mbox{\hyperlink{struct_mesh_geometry_a809bd47a42dcf1f8512c55c663354fe9}{Vertex\+Byte\+Stride}} = 0
 \item 
@@ -38,11 +46,21 @@ DXGI\+\_\+\+FORMAT \mbox{\hyperlink{struct_mesh_geometry_a4ab6fed21b08b6008850e4
 \item 
 UINT \mbox{\hyperlink{struct_mesh_geometry_ada154aecae7686cb96099c259fa49946}{Index\+Buffer\+Byte\+Size}} = 0
 \item 
+UINT \mbox{\hyperlink{struct_mesh_geometry_a0b2e69dc595217c3f600147e500a4a31}{Color\+Byte\+Stride}} = 0
+\item 
+UINT \mbox{\hyperlink{struct_mesh_geometry_a1298a377fa7b61bfdbf198cc80e14e3c}{Color\+Buffer\+Byte\+Size}} = 0
+\item 
 std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{struct_submesh_geometry}{Submesh\+Geometry}} $>$ \mbox{\hyperlink{struct_mesh_geometry_a0b2c5e9269169fb7c5d838240957fd10}{Draw\+Args}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_mesh_geometry_a249c29b781bbed54661c76f9c4342dcc}\label{struct_mesh_geometry_a249c29b781bbed54661c76f9c4342dcc}} 
+\index{MeshGeometry@{MeshGeometry}!ColorBufferView@{ColorBufferView}}
+\index{ColorBufferView@{ColorBufferView}!MeshGeometry@{MeshGeometry}}
+\doxysubsubsection{\texorpdfstring{ColorBufferView()}{ColorBufferView()}}
+{\footnotesize\ttfamily D3\+D12\+\_\+\+VERTEX\+\_\+\+BUFFER\+\_\+\+VIEW Mesh\+Geometry\+::\+Color\+Buffer\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 \mbox{\Hypertarget{struct_mesh_geometry_aba9e36f1f4439a88bed25a48cc337ece}\label{struct_mesh_geometry_aba9e36f1f4439a88bed25a48cc337ece}} 
 \index{MeshGeometry@{MeshGeometry}!DisposeUploaders@{DisposeUploaders}}
 \index{DisposeUploaders@{DisposeUploaders}!MeshGeometry@{MeshGeometry}}
@@ -64,6 +82,36 @@ std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{struct_submesh_geom
 
 
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_mesh_geometry_a1298a377fa7b61bfdbf198cc80e14e3c}\label{struct_mesh_geometry_a1298a377fa7b61bfdbf198cc80e14e3c}} 
+\index{MeshGeometry@{MeshGeometry}!ColorBufferByteSize@{ColorBufferByteSize}}
+\index{ColorBufferByteSize@{ColorBufferByteSize}!MeshGeometry@{MeshGeometry}}
+\doxysubsubsection{\texorpdfstring{ColorBufferByteSize}{ColorBufferByteSize}}
+{\footnotesize\ttfamily UINT Mesh\+Geometry\+::\+Color\+Buffer\+Byte\+Size = 0}
+
+\mbox{\Hypertarget{struct_mesh_geometry_a281ef611d2f40f2baa0993134c6a14d7}\label{struct_mesh_geometry_a281ef611d2f40f2baa0993134c6a14d7}} 
+\index{MeshGeometry@{MeshGeometry}!ColorBufferCPU@{ColorBufferCPU}}
+\index{ColorBufferCPU@{ColorBufferCPU}!MeshGeometry@{MeshGeometry}}
+\doxysubsubsection{\texorpdfstring{ColorBufferCPU}{ColorBufferCPU}}
+{\footnotesize\ttfamily Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ID3\+DBlob$>$ Mesh\+Geometry\+::\+Color\+Buffer\+CPU = nullptr}
+
+\mbox{\Hypertarget{struct_mesh_geometry_a0e4b64b879b617fb5eabc824bb5dedb6}\label{struct_mesh_geometry_a0e4b64b879b617fb5eabc824bb5dedb6}} 
+\index{MeshGeometry@{MeshGeometry}!ColorBufferGPU@{ColorBufferGPU}}
+\index{ColorBufferGPU@{ColorBufferGPU}!MeshGeometry@{MeshGeometry}}
+\doxysubsubsection{\texorpdfstring{ColorBufferGPU}{ColorBufferGPU}}
+{\footnotesize\ttfamily Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ID3\+D12\+Resource$>$ Mesh\+Geometry\+::\+Color\+Buffer\+GPU = nullptr}
+
+\mbox{\Hypertarget{struct_mesh_geometry_ae9e4ca59e40ccbae59680a6726457a94}\label{struct_mesh_geometry_ae9e4ca59e40ccbae59680a6726457a94}} 
+\index{MeshGeometry@{MeshGeometry}!ColorBufferUploader@{ColorBufferUploader}}
+\index{ColorBufferUploader@{ColorBufferUploader}!MeshGeometry@{MeshGeometry}}
+\doxysubsubsection{\texorpdfstring{ColorBufferUploader}{ColorBufferUploader}}
+{\footnotesize\ttfamily Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ID3\+D12\+Resource$>$ Mesh\+Geometry\+::\+Color\+Buffer\+Uploader = nullptr}
+
+\mbox{\Hypertarget{struct_mesh_geometry_a0b2e69dc595217c3f600147e500a4a31}\label{struct_mesh_geometry_a0b2e69dc595217c3f600147e500a4a31}} 
+\index{MeshGeometry@{MeshGeometry}!ColorByteStride@{ColorByteStride}}
+\index{ColorByteStride@{ColorByteStride}!MeshGeometry@{MeshGeometry}}
+\doxysubsubsection{\texorpdfstring{ColorByteStride}{ColorByteStride}}
+{\footnotesize\ttfamily UINT Mesh\+Geometry\+::\+Color\+Byte\+Stride = 0}
+
 \mbox{\Hypertarget{struct_mesh_geometry_a0b2c5e9269169fb7c5d838240957fd10}\label{struct_mesh_geometry_a0b2c5e9269169fb7c5d838240957fd10}} 
 \index{MeshGeometry@{MeshGeometry}!DrawArgs@{DrawArgs}}
 \index{DrawArgs@{DrawArgs}!MeshGeometry@{MeshGeometry}}

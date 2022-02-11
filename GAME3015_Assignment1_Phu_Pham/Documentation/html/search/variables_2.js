@@ -6,5 +6,10 @@ var searchData=
   ['caps4_3',['caps4',['../struct_d_d_s___h_e_a_d_e_r.html#a82a00dd554e8212cb5a002b1970b225c',1,'DDS_HEADER']]],
   ['cbperobjectpad1_4',['cbPerObjectPad1',['../struct_pass_constants.html#aaae2d67cebf30e767a800a1e508e249a',1,'PassConstants']]],
   ['cbperobjectpad2_5',['cbPerObjectPad2',['../struct_pass_constants.html#a617fb5be6baaf150a132c9ea0396abfa',1,'PassConstants']]],
-  ['cmdlistalloc_6',['CmdListAlloc',['../struct_frame_resource.html#a2c0624d447e7fe7697b37a91275066d1',1,'FrameResource']]]
+  ['cmdlistalloc_6',['CmdListAlloc',['../struct_frame_resource.html#a2c0624d447e7fe7697b37a91275066d1',1,'FrameResource']]],
+  ['colorbufferbytesize_7',['ColorBufferByteSize',['../struct_mesh_geometry.html#a1298a377fa7b61bfdbf198cc80e14e3c',1,'MeshGeometry']]],
+  ['colorbuffercpu_8',['ColorBufferCPU',['../struct_mesh_geometry.html#a281ef611d2f40f2baa0993134c6a14d7',1,'MeshGeometry']]],
+  ['colorbuffergpu_9',['ColorBufferGPU',['../struct_mesh_geometry.html#a0e4b64b879b617fb5eabc824bb5dedb6',1,'MeshGeometry']]],
+  ['colorbufferuploader_10',['ColorBufferUploader',['../struct_mesh_geometry.html#ae9e4ca59e40ccbae59680a6726457a94',1,'MeshGeometry']]],
+  ['colorbytestride_11',['ColorByteStride',['../struct_mesh_geometry.html#a0b2e69dc595217c3f600147e500a4a31',1,'MeshGeometry']]]
 ];

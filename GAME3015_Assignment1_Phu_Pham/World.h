@@ -1,3 +1,7 @@
+//GAME3015-Assignment1-PhuPham
+//Name:Phu Pham
+//ID:101250748
+//Last Updated: 11/2/2022
 #pragma once
 
 #include "Entity.h"
@@ -5,7 +9,7 @@
 #include "Aircraft.h"
 
 /// <summary>
-/// World.h and World.cpp scripts are where the game scene is built and rendered.
+/// Handles all objects that are built in World
 /// </summary>
 
 class World
@@ -21,17 +25,18 @@ public:
 	std::list<SceneNode*>	m_RenderList;
 	std::unique_ptr<MeshGeometry>	m_Mesh;
 
+	//Terrain 
 	Entity* Terrain1= new Entity;
 	Entity* Terrain2 = new Entity;
-
-
+	//Wingman
 	Entity* Wingman1 = new Player;
 	Entity* Wingman2 = new Player;
-
+	//Enemy
 	Aircraft* Enemy = new Aircraft;
+	//Player
 	Player* player = new Player;
 
-	void buildWorld(ID3D12Device* Device, ID3D12GraphicsCommandList* CmdList);
+	void Build(ID3D12Device* Device, ID3D12GraphicsCommandList* CmdList);
 
 	void Update(float DeltaTime, struct FrameResource* Frame);
 	void Draw(ID3D12GraphicsCommandList* CmdList, ID3D12DescriptorHeap* Desc,

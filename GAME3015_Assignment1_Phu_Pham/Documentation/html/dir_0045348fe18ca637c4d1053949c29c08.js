@@ -5,10 +5,6 @@ var dir_0045348fe18ca637c4d1053949c29c08 =
     [ "Aircraft.h", "_aircraft_8h.html", [
       [ "Aircraft", "class_aircraft.html", "class_aircraft" ]
     ] ],
-    [ "Enemy.cpp", "_enemy_8cpp.html", null ],
-    [ "Enemy.h", "_enemy_8h.html", [
-      [ "Enemy", "class_enemy.html", "class_enemy" ]
-    ] ],
     [ "Entity.cpp", "_entity_8cpp.html", null ],
     [ "Entity.h", "_entity_8h.html", [
       [ "Entity", "class_entity.html", "class_entity" ]
@@ -20,9 +16,17 @@ var dir_0045348fe18ca637c4d1053949c29c08 =
       [ "Vertex", "struct_vertex.html", "struct_vertex" ],
       [ "FrameResource", "struct_frame_resource.html", "struct_frame_resource" ]
     ] ],
+    [ "Game.cpp", "_game_8cpp.html", "_game_8cpp" ],
+    [ "Game.h", "_game_8h.html", "_game_8h" ],
     [ "GameClass.cpp", "_game_class_8cpp.html", "_game_class_8cpp" ],
     [ "GameClass.h", "_game_class_8h.html", "_game_class_8h" ],
+    [ "MiscProperties.h", "_misc_properties_8h.html", "_misc_properties_8h" ],
+    [ "Player.cpp", "_player_8cpp.html", null ],
+    [ "Player.h", "_player_8h.html", [
+      [ "Player", "class_player.html", "class_player" ]
+    ] ],
     [ "RenderItem.h", "_render_item_8h.html", "_render_item_8h" ],
+    [ "SceneNode.cpp", "_scene_node_8cpp.html", null ],
     [ "SceneNode.h", "_scene_node_8h.html", [
       [ "SceneNode", "class_scene_node.html", "class_scene_node" ]
     ] ],

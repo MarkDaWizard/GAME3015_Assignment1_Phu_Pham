@@ -10,9 +10,6 @@
     <ClCompile Include="Common\d3dUtil.cpp">
       <Filter>CommonFiles</Filter>
     </ClCompile>
-    <ClCompile Include="Common\MathHelper.cpp">
-      <Filter>CommonFiles</Filter>
-    </ClCompile>
     <ClCompile Include="Aircraft.cpp">
       <Filter>Source</Filter>
     </ClCompile>
@@ -25,23 +22,26 @@
     <ClCompile Include="GameClass.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Common\DDSTextureLoader.cpp">
-      <Filter>CommonFiles</Filter>
-    </ClCompile>
-    <ClCompile Include="Common\GeometryGenerator.cpp">
-      <Filter>CommonFiles</Filter>
-    </ClCompile>
-    <ClCompile Include="FrameResource.cpp">
-      <Filter>CommonFiles</Filter>
-    </ClCompile>
-    <ClCompile Include="Common\GameTimer.cpp">
-      <Filter>CommonFiles</Filter>
-    </ClCompile>
     <ClCompile Include="SceneNode.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\DDSTextureLoader.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameResource.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\GameTimer.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\GeometryGenerator.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\MathHelper.cpp">
+      <Filter>Misc</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -55,9 +55,6 @@
       <Filter>CommonFiles</Filter>
     </ClInclude>
     <ClInclude Include="Common\d3dx12.h">
-      <Filter>CommonFiles</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\MathHelper.h">
       <Filter>CommonFiles</Filter>
     </ClInclude>
     <ClInclude Include="Aircraft.h">
@@ -75,29 +72,32 @@
     <ClInclude Include="GameClass.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="Common\DDSTextureLoader.h">
-      <Filter>CommonFiles</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\GeometryGenerator.h">
-      <Filter>CommonFiles</Filter>
-    </ClInclude>
-    <ClInclude Include="RenderItem.h">
-      <Filter>CommonFiles</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\UploadBuffer.h">
-      <Filter>CommonFiles</Filter>
-    </ClInclude>
-    <ClInclude Include="FrameResource.h">
-      <Filter>CommonFiles</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\GameTimer.h">
-      <Filter>CommonFiles</Filter>
-    </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="GameInfo.h">
-      <Filter>Header</Filter>
+    <ClInclude Include="Common\DDSTextureLoader.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameResource.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\GameTimer.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\GeometryGenerator.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\MathHelper.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderItem.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\UploadBuffer.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="MiscProperties.h">
+      <Filter>Misc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +109,9 @@
     </Filter>
     <Filter Include="Header">
       <UniqueIdentifier>{4d101d37-27d5-4b5c-aa7e-710337177190}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc">
+      <UniqueIdentifier>{51ed4afc-a7a0-4b08-9785-46555bf9a9e0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

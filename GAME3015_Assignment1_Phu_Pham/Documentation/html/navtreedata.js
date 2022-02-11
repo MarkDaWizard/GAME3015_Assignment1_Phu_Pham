@@ -43,7 +43,8 @@ var NAVTREE =
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
-        [ "Typedefs", "functions_type.html", null ]
+        [ "Typedefs", "functions_type.html", null ],
+        [ "Related Functions", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -63,7 +64,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_aircraft_8cpp.html",
-"class_scene_node.html"
+"class_game.html",
+"struct_material.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

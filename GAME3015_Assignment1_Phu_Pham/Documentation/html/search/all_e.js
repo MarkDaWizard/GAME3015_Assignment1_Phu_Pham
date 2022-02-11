@@ -1,12 +1,18 @@
 var searchData=
 [
-  ['objcbindex_0',['ObjCBIndex',['../class_render_item.html#a4a4015284acd79469b70c358b6c1c2a1',1,'RenderItem']]],
-  ['objectcb_1',['ObjectCB',['../struct_frame_resource.html#adec81cdfb788278fac8ad38066e6c18f',1,'FrameResource']]],
-  ['objectconstants_2',['ObjectConstants',['../struct_object_constants.html',1,'']]],
-  ['onmousedown_3',['OnMouseDown',['../class_d3_d_app.html#afa0d546d52408a9b55866e6ba065ddae',1,'D3DApp']]],
-  ['onmousemove_4',['OnMouseMove',['../class_d3_d_app.html#aa5270048920cd8a62dc07c7ed5e97622',1,'D3DApp']]],
-  ['onmouseup_5',['OnMouseUp',['../class_d3_d_app.html#a98be07429ac3ffb5f76cbe831f9d94de',1,'D3DApp']]],
-  ['onresize_6',['OnResize',['../class_d3_d_app.html#a4c1b99cd01576c413d3a50d1435f1b8a',1,'D3DApp']]],
-  ['opaque_7',['Opaque',['../_render_item_8h.html#aa63ede3e7371d4bc358f651428d23159afaa90538de35640e4b1e31ccf35b6eb5',1,'RenderItem.h']]],
-  ['operator_3d_8',['operator=',['../class_d3_d_app.html#a973e1436e4ba07338548073a49f8a253',1,'D3DApp::operator=()'],['../class_upload_buffer.html#a279ae8958cebcdb24f5e167a675ad9ce',1,'UploadBuffer::operator=()'],['../struct_frame_resource.html#a4d75d2a5a7bca5a0bd70a15b449c5776',1,'FrameResource::operator=()'],['../class_game.html#a9bda5763ea460634fef947be2530c8f5',1,'Game::operator=()']]]
+  ['passcb_0',['PassCB',['../struct_frame_resource.html#a2a301e2320545cc025551247f9f60df5',1,'FrameResource']]],
+  ['passconstants_1',['PassConstants',['../struct_pass_constants.html',1,'']]],
+  ['pedestal_2',['Pedestal',['../class_camera.html#ade74bfe828379aeb864cddf10cada486',1,'Camera']]],
+  ['pi_3',['Pi',['../class_math_helper.html#a988107c0e593a0e1c6aae304814aabf7',1,'MathHelper']]],
+  ['pitch_4',['Pitch',['../class_camera.html#ac2c337aac22466da2222ab79370db27b',1,'Camera']]],
+  ['pitchorlinearsize_5',['pitchOrLinearSize',['../struct_d_d_s___h_e_a_d_e_r.html#a77410ea1d2209672fc6651b5322a9306',1,'DDS_HEADER']]],
+  ['player_6',['Player',['../class_player.html',1,'']]],
+  ['player_7',['player',['../class_world.html#addf54f12f3a1e9c8f120265bafa3474e',1,'World']]],
+  ['player_8',['Player',['../class_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8',1,'Player']]],
+  ['player_2ecpp_9',['Player.cpp',['../_player_8cpp.html',1,'']]],
+  ['player_2eh_10',['Player.h',['../_player_8h.html',1,'']]],
+  ['pos_11',['Pos',['../struct_vertex.html#af07583772f2c7eee146e655826467dcb',1,'Vertex']]],
+  ['position_12',['Position',['../struct_light.html#a759c2228a71bfc669460ae4210a48e52',1,'Light::Position()'],['../struct_geometry_generator_1_1_vertex.html#ad31c2a7a30542745c70422a0cb34d22d',1,'GeometryGenerator::Vertex::Position()']]],
+  ['primitivetype_13',['PrimitiveType',['../class_render_item.html#ab3aad9050526250c4877956789e50b3a',1,'RenderItem']]],
+  ['proj_14',['Proj',['../struct_pass_constants.html#a8af99b882f26e3507717dacc0c957521',1,'PassConstants']]]
 ];

@@ -11,7 +11,7 @@ var searchData=
   ['indices32_8',['Indices32',['../struct_geometry_generator_1_1_mesh_data.html#af32ad2f27a3c6c78700f726050e2eb73',1,'GeometryGenerator::MeshData']]],
   ['infinity_9',['Infinity',['../class_math_helper.html#a47ba7794c81623ae250d7593a0e8de6a',1,'MathHelper']]],
   ['initdirect3d_10',['InitDirect3D',['../class_d3_d_app.html#a13ad61cbed0b9641974cc6183ba6a22b',1,'D3DApp']]],
-  ['initialize_11',['Initialize',['../class_d3_d_app.html#a961fa79170dcbde858923a5250c322be',1,'D3DApp::Initialize()'],['../class_game.html#a16354d232327f6c21319713bf6983674',1,'Game::Initialize()']]],
+  ['initialize_11',['Initialize',['../class_d3_d_app.html#a961fa79170dcbde858923a5250c322be',1,'D3DApp::Initialize()'],['../class_game.html#a16354d232327f6c21319713bf6983674',1,'Game::Initialize() override'],['../class_game.html#a904d3bbf91971c71986d9c414850cf04',1,'Game::Initialize() override']]],
   ['initmainwindow_12',['InitMainWindow',['../class_d3_d_app.html#a775e141865e0de4dc3f3a39281cbcf02',1,'D3DApp']]],
   ['inversetranspose_13',['InverseTranspose',['../class_math_helper.html#aaad3761266ef094f5448993a8b2992a5',1,'MathHelper']]],
   ['invproj_14',['InvProj',['../struct_pass_constants.html#a9a1ac0a0421d54bf40c9749ec1d1537c',1,'PassConstants']]],

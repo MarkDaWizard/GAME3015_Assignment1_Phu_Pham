@@ -1,9 +1,13 @@
+//GAME3015-Assignment1-PhuPham
+//Name:Phu Pham
+//ID:101250748
+//Last Updated: 11/2/2022
 #pragma once
 #include "SceneNode.h"
 #include "FrameResource.h"
 
 /// <summary>
-/// Game elements in the world.
+/// Main class for most objects in game world
 /// </summary>
 class Entity	:
 	public SceneNode

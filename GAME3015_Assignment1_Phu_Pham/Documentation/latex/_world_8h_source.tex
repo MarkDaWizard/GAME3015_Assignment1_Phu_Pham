@@ -2,52 +2,47 @@
 \label{_world_8h_source}\index{GAME3015\_Assignment1\_Phu\_Pham/World.h@{GAME3015\_Assignment1\_Phu\_Pham/World.h}}
 \mbox{\hyperlink{_world_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
-\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <string>}}
-\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <map>}}
-\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
-\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_aircraft_8h}{Aircraft.h}}"{}}}
-\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_wingman_8h}{Wingman.h}}"{}}}
-\DoxyCodeLine{7 \textcolor{comment}{//GAME3015-\/Assignment1-\/Phu-\/Pham}}
-\DoxyCodeLine{8 \textcolor{comment}{//10/2/2022}}
-\DoxyCodeLine{9 \textcolor{comment}{//Name: Phu Pham}}
-\DoxyCodeLine{10 \textcolor{comment}{//ID: 101250748}}
-\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_enemy_8h}{Enemy.h}}"{}}}
-\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_world}{World}}}
-\DoxyCodeLine{13 \{}
-\DoxyCodeLine{14 \textcolor{keyword}{public}:}
-\DoxyCodeLine{15     std::vector<Entity*> \mbox{\hyperlink{class_world_a8a66d2af820e360ecbcb8ce0a56c6bb6}{AllEntities}};}
-\DoxyCodeLine{16 }
-\DoxyCodeLine{17     std::map<std::string, std::unique\_ptr<MeshGeometry>> \mbox{\hyperlink{class_world_a6dfcc38e198b6dac0050010cc4ab4dc8}{mGeometries}};}
-\DoxyCodeLine{18     std::map<std::string, std::unique\_ptr<Material>> \mbox{\hyperlink{class_world_aa3af5b8b78b28110b3d60541b5744f9f}{mMaterials}};}
-\DoxyCodeLine{19 }
-\DoxyCodeLine{20     \textcolor{comment}{// List of all the render items.}}
-\DoxyCodeLine{21     std::vector<std::unique\_ptr<RenderItem>> \mbox{\hyperlink{class_world_a2d7fd8917bbec5cc9beac87015b71b56}{mAllRitems}};}
-\DoxyCodeLine{22     \textcolor{comment}{// Render items divided by PSO.}}
-\DoxyCodeLine{23     std::vector<RenderItem*> \mbox{\hyperlink{class_world_ab035a339dace99b036b76f3e4a328b01}{mRitemLayer}}[(int)\mbox{\hyperlink{_render_item_8h_aa63ede3e7371d4bc358f651428d23159ae93f994f01c537c4e2f7d8528c3eb5e9}{RenderLayer::Count}}];}
-\DoxyCodeLine{24 }
-\DoxyCodeLine{25     \textcolor{comment}{//Player Class}}
-\DoxyCodeLine{26     \mbox{\hyperlink{class_aircraft}{Aircraft}}* \mbox{\hyperlink{class_world_a8080abc5255a60121bee3f4474452aca}{jet}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_aircraft}{Aircraft}}();}
+\DoxyCodeLine{1 \textcolor{comment}{//GAME3015-\/Assignment1-\/PhuPham}}
+\DoxyCodeLine{2 \textcolor{comment}{//Name:Phu Pham}}
+\DoxyCodeLine{3 \textcolor{comment}{//ID:101250748}}
+\DoxyCodeLine{4 \textcolor{comment}{//Last Updated: 11/2/2022}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_entity_8h}{Entity.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_player_8h}{Player.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_aircraft_8h}{Aircraft.h}}"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_world}{World}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_world_afa39d4e6f714a7a3691ac0c656f5e8a8}{World}}();}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_world_a8c73fba541a5817fff65147ba47cd827}{\string~World}}();}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_scene_node}{SceneNode}}* \mbox{\hyperlink{class_world_a41a3d6173080108bd85c1224d3cca933}{m\_RootNode}};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     std::map<std::string, std::unique\_ptr<Material>> \mbox{\hyperlink{class_world_aa3af5b8b78b28110b3d60541b5744f9f}{mMaterials}};}
+\DoxyCodeLine{25     std::list<SceneNode*>   \mbox{\hyperlink{class_world_a23253a80df6ecb711dace56fc3e9ee20}{m\_RenderList}};}
+\DoxyCodeLine{26     std::unique\_ptr<MeshGeometry>   \mbox{\hyperlink{class_world_ad8e82905815f956a43314e52bfbee9de}{m\_Mesh}};}
 \DoxyCodeLine{27 }
-\DoxyCodeLine{28     \textcolor{comment}{//Wingman Class}}
-\DoxyCodeLine{29     \mbox{\hyperlink{class_wingman}{Wingman}}* \mbox{\hyperlink{class_world_a54e5a606e9c617ab76e21868560afa72}{wingman1}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_wingman}{Wingman}}();}
-\DoxyCodeLine{30     \mbox{\hyperlink{class_wingman}{Wingman}}* \mbox{\hyperlink{class_world_a51ce2c1839e255bdbb2c377858f50525}{wingman2}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_wingman}{Wingman}}();}
-\DoxyCodeLine{31 }
-\DoxyCodeLine{32     \textcolor{comment}{//Enemy Class}}
-\DoxyCodeLine{33     \mbox{\hyperlink{class_enemy}{Enemy}}* \mbox{\hyperlink{class_world_ac2f967170b9aceddd9cfa7de640c80a1}{enemy}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_enemy}{Enemy}}();}
-\DoxyCodeLine{34     \mbox{\hyperlink{class_enemy}{Enemy}}* \mbox{\hyperlink{class_world_a0f2c18a4970eb7e9df0b5ba99a4b364b}{enemy2}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_enemy}{Enemy}}();}
-\DoxyCodeLine{35 }
-\DoxyCodeLine{36     \textcolor{comment}{// Reusing wingman class for trees}}
-\DoxyCodeLine{37     \mbox{\hyperlink{class_wingman}{Wingman}}* \mbox{\hyperlink{class_world_a4e6fef518f92c7ff760867f36c860885}{tree}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_wingman}{Wingman}}();}
-\DoxyCodeLine{38     \mbox{\hyperlink{class_wingman}{Wingman}}* \mbox{\hyperlink{class_world_a36aeb59490baf5d2e41147b507015ef5}{tree2}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_wingman}{Wingman}}();}
-\DoxyCodeLine{39     \mbox{\hyperlink{class_wingman}{Wingman}}* \mbox{\hyperlink{class_world_a9a0fa5311d61c9ccda4cfe306c4a0ca5}{tree3}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_wingman}{Wingman}}();}
-\DoxyCodeLine{40     \mbox{\hyperlink{class_wingman}{Wingman}}* \mbox{\hyperlink{class_world_acaaf78a76d0f82a51ed75d44d09207bb}{tree4}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_wingman}{Wingman}}();}
-\DoxyCodeLine{41     \mbox{\hyperlink{class_wingman}{Wingman}}* \mbox{\hyperlink{class_world_afd78ca20ed6e5237a9309169a153795e}{tree5}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_wingman}{Wingman}}();}
-\DoxyCodeLine{42     \mbox{\hyperlink{class_wingman}{Wingman}}* \mbox{\hyperlink{class_world_abd3d97e46c3b360785626c657ce7e779}{tree6}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_wingman}{Wingman}}();}
-\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_a3950826d9f256fa8516c3419d50553fd}{buildWorld}}();}
-\DoxyCodeLine{44 }
-\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_a3294ab79d9610b2659dcb57cb5638637}{Update}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt);}
-\DoxyCodeLine{46 \};}
-\DoxyCodeLine{47 }
+\DoxyCodeLine{28     \textcolor{comment}{//Terrain }}
+\DoxyCodeLine{29     \mbox{\hyperlink{class_entity}{Entity}}* \mbox{\hyperlink{class_world_a1ae5b0ba0f1f1424ef998fb29c56abc8}{Terrain1}}= \textcolor{keyword}{new} \mbox{\hyperlink{class_entity}{Entity}};}
+\DoxyCodeLine{30     \mbox{\hyperlink{class_entity}{Entity}}* \mbox{\hyperlink{class_world_a48526edee7b706d3d840222bfd774cb5}{Terrain2}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_entity}{Entity}};}
+\DoxyCodeLine{31     \textcolor{comment}{//Wingman}}
+\DoxyCodeLine{32     \mbox{\hyperlink{class_entity}{Entity}}* \mbox{\hyperlink{class_world_a30df3ffd57ab290ba0fe445fda3cba90}{Wingman1}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_player}{Player}};}
+\DoxyCodeLine{33     \mbox{\hyperlink{class_entity}{Entity}}* \mbox{\hyperlink{class_world_a340e0b43ca1edc349b4e26c832efd5a3}{Wingman2}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_player}{Player}};}
+\DoxyCodeLine{34     \textcolor{comment}{//Enemy}}
+\DoxyCodeLine{35     \mbox{\hyperlink{class_aircraft}{Aircraft}}* \mbox{\hyperlink{class_world_a3c438b172f941d8d026dd45ae3ddfc1a}{Enemy}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_aircraft}{Aircraft}};}
+\DoxyCodeLine{36     \textcolor{comment}{//Player}}
+\DoxyCodeLine{37     \mbox{\hyperlink{class_player}{Player}}* \mbox{\hyperlink{class_world_addf54f12f3a1e9c8f120265bafa3474e}{player}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_player}{Player}};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_acd649dca4bf0608df6fb6d153e2274c8}{Build}}(ID3D12Device* Device, ID3D12GraphicsCommandList* CmdList);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_a2855c23b04b207643d162e3f4d2dd6f8}{Update}}(\textcolor{keywordtype}{float} DeltaTime, \textcolor{keyword}{struct} \mbox{\hyperlink{struct_frame_resource}{FrameResource}}* Frame);}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_a49d6a1ac236041e2d71fdca61adf31e3}{Draw}}(ID3D12GraphicsCommandList* CmdList, ID3D12DescriptorHeap* Desc,}
+\DoxyCodeLine{43         UINT DescSize, \textcolor{keyword}{struct} \mbox{\hyperlink{struct_frame_resource}{FrameResource}}* Frame, \textcolor{keywordtype}{float} DeltaTime);}
+\DoxyCodeLine{44 \};}
+\DoxyCodeLine{45 }
 
 \end{DoxyCode}

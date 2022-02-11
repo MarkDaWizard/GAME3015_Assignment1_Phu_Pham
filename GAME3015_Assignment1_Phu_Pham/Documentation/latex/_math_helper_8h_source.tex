@@ -26,7 +26,7 @@
 \DoxyCodeLine{22     \textcolor{comment}{// Returns random float in [a, b).}}
 \DoxyCodeLine{23     \textcolor{keyword}{static} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_math_helper_a5b45a90302f9791a4961d943d473d6bb}{RandF}}(\textcolor{keywordtype}{float} a, \textcolor{keywordtype}{float} b)}
 \DoxyCodeLine{24     \{}
-\DoxyCodeLine{25         \textcolor{keywordflow}{return} a + \mbox{\hyperlink{class_math_helper_ad50130c776aee103e24d7170adcd13a3}{RandF}}()*(b-\/a);}
+\DoxyCodeLine{25         \textcolor{keywordflow}{return} a + \mbox{\hyperlink{class_math_helper_ad50130c776aee103e24d7170adcd13a3}{RandF}}() * (b -\/ a);}
 \DoxyCodeLine{26     \}}
 \DoxyCodeLine{27 }
 \DoxyCodeLine{28     \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_math_helper_ab957edc5bcaf8d4966a1fde0e7c5fe38}{Rand}}(\textcolor{keywordtype}{int} a, \textcolor{keywordtype}{int} b)}
@@ -45,17 +45,17 @@
 \DoxyCodeLine{41     \{}
 \DoxyCodeLine{42         \textcolor{keywordflow}{return} a > b ? a : b;}
 \DoxyCodeLine{43     \}}
-\DoxyCodeLine{44      }
+\DoxyCodeLine{44 }
 \DoxyCodeLine{45     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
 \DoxyCodeLine{46     \textcolor{keyword}{static} T \mbox{\hyperlink{class_math_helper_a1dfdb08dbd787c42bc5a42f41dd9b64c}{Lerp}}(\textcolor{keyword}{const} T\& a, \textcolor{keyword}{const} T\& b, \textcolor{keywordtype}{float} t)}
 \DoxyCodeLine{47     \{}
-\DoxyCodeLine{48         \textcolor{keywordflow}{return} a + (b-\/a)*t;}
+\DoxyCodeLine{48         \textcolor{keywordflow}{return} a + (b -\/ a) * t;}
 \DoxyCodeLine{49     \}}
 \DoxyCodeLine{50 }
 \DoxyCodeLine{51     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
 \DoxyCodeLine{52     \textcolor{keyword}{static} T \mbox{\hyperlink{class_math_helper_af659fe642c374ff42247e25e887ae816}{Clamp}}(\textcolor{keyword}{const} T\& x, \textcolor{keyword}{const} T\& low, \textcolor{keyword}{const} T\& high)}
 \DoxyCodeLine{53     \{}
-\DoxyCodeLine{54         \textcolor{keywordflow}{return} x < low ? low : (x > high ? high : x); }
+\DoxyCodeLine{54         \textcolor{keywordflow}{return} x < low ? low : (x > high ? high : x);}
 \DoxyCodeLine{55     \}}
 \DoxyCodeLine{56 }
 \DoxyCodeLine{57     \textcolor{comment}{// Returns the polar angle of the point (x,y) in [0, 2*PI).}}
@@ -64,9 +64,9 @@
 \DoxyCodeLine{60     \textcolor{keyword}{static} DirectX::XMVECTOR \mbox{\hyperlink{class_math_helper_a592137b14c704600422afa7654f0d441}{SphericalToCartesian}}(\textcolor{keywordtype}{float} radius, \textcolor{keywordtype}{float} theta, \textcolor{keywordtype}{float} phi)}
 \DoxyCodeLine{61     \{}
 \DoxyCodeLine{62         \textcolor{keywordflow}{return} DirectX::XMVectorSet(}
-\DoxyCodeLine{63             radius*sinf(phi)*cosf(theta),}
-\DoxyCodeLine{64             radius*cosf(phi),}
-\DoxyCodeLine{65             radius*sinf(phi)*sinf(theta),}
+\DoxyCodeLine{63             radius * sinf(phi) * cosf(theta),}
+\DoxyCodeLine{64             radius * cosf(phi),}
+\DoxyCodeLine{65             radius * sinf(phi) * sinf(theta),}
 \DoxyCodeLine{66             1.0f);}
 \DoxyCodeLine{67     \}}
 \DoxyCodeLine{68 }

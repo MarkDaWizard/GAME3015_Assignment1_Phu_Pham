@@ -1,21 +1,14 @@
 var searchData=
 [
-  ['scale_0',['Scale',['../class_scene_node.html#a9403daafc00766d207440c1aaad607b8',1,'SceneNode']]],
-  ['scenenode_1',['SceneNode',['../class_scene_node.html',1,'']]],
-  ['scenenode_2eh_2',['SceneNode.h',['../_scene_node_8h.html',1,'']]],
-  ['set4xmsaastate_3',['Set4xMsaaState',['../class_d3_d_app.html#a74ce23c1a7b775c3af6c67522abaa2bd',1,'D3DApp']]],
-  ['setlens_4',['SetLens',['../class_camera.html#a5619188052108689a7a3171597fca7b6',1,'Camera']]],
-  ['setposition_5',['SetPosition',['../class_camera.html#af2a973276a03c6822cfc8dd0b763d938',1,'Camera::SetPosition(float x, float y, float z)'],['../class_camera.html#ae4d37b50e209110d7213dd2a01a5e073',1,'Camera::SetPosition(const DirectX::XMFLOAT3 &amp;v)']]],
-  ['setvelocity_6',['setVelocity',['../class_entity.html#a472e1690df5fb48c6c7f052e4cb39c78',1,'Entity::setVelocity(XMFLOAT3 velocity)'],['../class_entity.html#ab67c759f2d8215c78e2951e0716db310',1,'Entity::setVelocity(float x, float y)']]],
-  ['size_7',['size',['../struct_d_d_s___p_i_x_e_l_f_o_r_m_a_t.html#adb357eb46848e57b8d89b59d31608f6c',1,'DDS_PIXELFORMAT::size()'],['../struct_d_d_s___h_e_a_d_e_r.html#a989502ea402a8e5939395a6b98ae9ce0',1,'DDS_HEADER::size()']]],
-  ['sphericaltocartesian_8',['SphericalToCartesian',['../class_math_helper.html#a592137b14c704600422afa7654f0d441',1,'MathHelper']]],
-  ['spotpower_9',['SpotPower',['../struct_light.html#a7202d90f1b073d3ac170c18451f0bc92',1,'Light']]],
-  ['start_10',['Start',['../class_game_timer.html#a4af503863ddee320c9e034dc2938c2e1',1,'GameTimer']]],
-  ['startindexlocation_11',['StartIndexLocation',['../struct_submesh_geometry.html#a56f8aee51b11ee61a229679000a1aeb6',1,'SubmeshGeometry::StartIndexLocation()'],['../class_render_item.html#a979179c6dd354cd329563e3599245463',1,'RenderItem::StartIndexLocation()']]],
-  ['stop_12',['Stop',['../class_game_timer.html#a61b1ecea219fbe2dfff86f9f9cab98b1',1,'GameTimer']]],
-  ['strafe_13',['Strafe',['../class_camera.html#a9b3e0ff70f8d5119a837391170bcfa2f',1,'Camera']]],
-  ['strength_14',['Strength',['../struct_light.html#a015096e9847bd33050b73a13c200a4c1',1,'Light']]],
-  ['subdivide_15',['Subdivide',['../class_geometry_generator.html#ad670e32318f22a917b2771cb9719f6a9',1,'GeometryGenerator']]],
-  ['submeshgeometry_16',['SubmeshGeometry',['../struct_submesh_geometry.html',1,'']]],
-  ['swapchainbuffercount_17',['SwapChainBufferCount',['../class_d3_d_app.html#af4cd47b4bb3b28e1013e861355baf8e8',1,'D3DApp']]]
+  ['tangentu_0',['TangentU',['../struct_geometry_generator_1_1_vertex.html#a717df2eee4e35bb0eb8f4ecf262edf4f',1,'GeometryGenerator::Vertex']]],
+  ['terrain1_1',['Terrain1',['../class_world.html#a1ae5b0ba0f1f1424ef998fb29c56abc8',1,'World']]],
+  ['terrain2_2',['Terrain2',['../class_world.html#a48526edee7b706d3d840222bfd774cb5',1,'World']]],
+  ['texc_3',['TexC',['../struct_geometry_generator_1_1_vertex.html#ab18dadcdb6a57e997bfd6d0e53e426c6',1,'GeometryGenerator::Vertex::TexC()'],['../struct_vertex.html#a43e8c374e56c6ed3acc708ba2de1c70c',1,'Vertex::TexC()']]],
+  ['textransform_4',['TexTransform',['../struct_object_constants.html#a0a7f8e4817a18595707569b307060a42',1,'ObjectConstants::TexTransform()'],['../class_render_item.html#ac6799548474209d172cbb3d337f56074',1,'RenderItem::TexTransform()']]],
+  ['texture_5',['Texture',['../struct_texture.html',1,'']]],
+  ['throwiffailed_6',['ThrowIfFailed',['../d3d_util_8h.html#af3892d76181a8a44edbd1a71a6ae9b97',1,'d3dUtil.h']]],
+  ['tick_7',['Tick',['../class_game_timer.html#ac02f02b90ae1c2d6a2834abb5069f367',1,'GameTimer']]],
+  ['tostring_8',['ToString',['../classd3d_util.html#ae0b7d841076df11833db2564c86faefe',1,'d3dUtil::ToString()'],['../class_dx_exception.html#a031a5ff549f043decbe96093e73dac27',1,'DxException::ToString()']]],
+  ['totaltime_9',['TotalTime',['../struct_pass_constants.html#a8b7dc8578d216518bff83264bc85d34c',1,'PassConstants::TotalTime()'],['../class_game_timer.html#a4d51c259eeb170d1841f84f41779592d',1,'GameTimer::TotalTime()']]],
+  ['transparent_10',['Transparent',['../_game_8h.html#aa63ede3e7371d4bc358f651428d23159a3d971943089a3388c01fb297a32d9ba7',1,'Transparent():&#160;Game.h'],['../_game_class_8h.html#aa63ede3e7371d4bc358f651428d23159a3d971943089a3388c01fb297a32d9ba7',1,'Transparent():&#160;GameClass.h'],['../_render_item_8h.html#aa63ede3e7371d4bc358f651428d23159a3d971943089a3388c01fb297a32d9ba7',1,'Transparent():&#160;RenderItem.h'],['../_game_8h.html#aa63ede3e7371d4bc358f651428d23159a3d971943089a3388c01fb297a32d9ba7',1,'Transparent():&#160;Game.h'],['../_game_class_8h.html#aa63ede3e7371d4bc358f651428d23159a3d971943089a3388c01fb297a32d9ba7',1,'Transparent():&#160;GameClass.h'],['../_render_item_8h.html#aa63ede3e7371d4bc358f651428d23159a3d971943089a3388c01fb297a32d9ba7',1,'Transparent():&#160;RenderItem.h'],['../_game_8h.html#aa63ede3e7371d4bc358f651428d23159a3d971943089a3388c01fb297a32d9ba7',1,'Transparent():&#160;Game.h'],['../_game_class_8h.html#aa63ede3e7371d4bc358f651428d23159a3d971943089a3388c01fb297a32d9ba7',1,'Transparent():&#160;GameClass.h'],['../_render_item_8h.html#aa63ede3e7371d4bc358f651428d23159a3d971943089a3388c01fb297a32d9ba7',1,'Transparent():&#160;RenderItem.h']]]
 ];

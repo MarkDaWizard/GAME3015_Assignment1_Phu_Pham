@@ -118,7 +118,7 @@ $(document).ready(function(){initNavTree('_math_helper_8h_source.html',''); init
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">// Returns random float in [a, b).</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_math_helper.html#a5b45a90302f9791a4961d943d473d6bb">   23</a></span>    <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_math_helper.html#a5b45a90302f9791a4961d943d473d6bb">RandF</a>(<span class="keywordtype">float</span> a, <span class="keywordtype">float</span> b)</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">return</span> a + <a class="code hl_function" href="class_math_helper.html#ad50130c776aee103e24d7170adcd13a3">RandF</a>()*(b-a);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">return</span> a + <a class="code hl_function" href="class_math_helper.html#ad50130c776aee103e24d7170adcd13a3">RandF</a>() * (b - a);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_math_helper.html#ab957edc5bcaf8d4966a1fde0e7c5fe38">   28</a></span>    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_math_helper.html#ab957edc5bcaf8d4966a1fde0e7c5fe38">Rand</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b)</div>
@@ -137,17 +137,17 @@ $(document).ready(function(){initNavTree('_math_helper_8h_source.html',''); init
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">return</span> a &gt; b ? a : b;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>     </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_math_helper.html#a1dfdb08dbd787c42bc5a42f41dd9b64c">   46</a></span>    <span class="keyword">static</span> T <a class="code hl_function" href="class_math_helper.html#a1dfdb08dbd787c42bc5a42f41dd9b64c">Lerp</a>(<span class="keyword">const</span> T&amp; a, <span class="keyword">const</span> T&amp; b, <span class="keywordtype">float</span> t)</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">return</span> a + (b-a)*t;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">return</span> a + (b - a) * t;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_math_helper.html#af659fe642c374ff42247e25e887ae816">   52</a></span>    <span class="keyword">static</span> T <a class="code hl_function" href="class_math_helper.html#af659fe642c374ff42247e25e887ae816">Clamp</a>(<span class="keyword">const</span> T&amp; x, <span class="keyword">const</span> T&amp; low, <span class="keyword">const</span> T&amp; high)</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">return</span> x &lt; low ? low : (x &gt; high ? high : x); </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">return</span> x &lt; low ? low : (x &gt; high ? high : x);</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// Returns the polar angle of the point (x,y) in [0, 2*PI).</span></div>
@@ -156,9 +156,9 @@ $(document).ready(function(){initNavTree('_math_helper_8h_source.html',''); init
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_math_helper.html#a592137b14c704600422afa7654f0d441">   60</a></span>    <span class="keyword">static</span> DirectX::XMVECTOR <a class="code hl_function" href="class_math_helper.html#a592137b14c704600422afa7654f0d441">SphericalToCartesian</a>(<span class="keywordtype">float</span> radius, <span class="keywordtype">float</span> theta, <span class="keywordtype">float</span> phi)</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    {</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">return</span> DirectX::XMVectorSet(</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            radius*sinf(phi)*cosf(theta),</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            radius*cosf(phi),</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            radius*sinf(phi)*sinf(theta),</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            radius * sinf(phi) * cosf(theta),</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            radius * cosf(phi),</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            radius * sinf(phi) * sinf(theta),</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            1.0f);</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>

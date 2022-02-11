@@ -1,7 +1,11 @@
+//GAME3015-Assignment1-PhuPham
+//Name:Phu Pham
+//ID:101250748
+//Last Updated: 11/2/2022
 #include "Entity.h"
 
 Entity::Entity()	:
-	m_MoveSpeed(1.f)
+	m_MoveSpeed(0.5f)
 {
 	m_Render = true;
 }

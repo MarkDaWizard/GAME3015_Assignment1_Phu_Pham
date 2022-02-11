@@ -1,9 +1,14 @@
+//GAME3015-Assignment1-PhuPham
+//Name:Phu Pham
+//ID:101250748
+//Last Updated: 11/2/2022
+
 #pragma once
 
 #include "Entity.h"
 
 /// <summary>
-/// A plane that will act as an enemy character
+/// Enemy class, derived from Entity
 /// </summary>
 class Aircraft	:
 	public Entity

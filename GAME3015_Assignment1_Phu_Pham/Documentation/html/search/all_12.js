@@ -1,18 +1,10 @@
 var searchData=
 [
-  ['tangentu_0',['TangentU',['../struct_geometry_generator_1_1_vertex.html#a717df2eee4e35bb0eb8f4ecf262edf4f',1,'GeometryGenerator::Vertex']]],
-  ['texc_1',['TexC',['../struct_geometry_generator_1_1_vertex.html#ab18dadcdb6a57e997bfd6d0e53e426c6',1,'GeometryGenerator::Vertex::TexC()'],['../struct_vertex.html#a43e8c374e56c6ed3acc708ba2de1c70c',1,'Vertex::TexC()']]],
-  ['textransform_2',['TexTransform',['../struct_object_constants.html#a0a7f8e4817a18595707569b307060a42',1,'ObjectConstants::TexTransform()'],['../class_render_item.html#ac6799548474209d172cbb3d337f56074',1,'RenderItem::TexTransform()']]],
-  ['texture_3',['Texture',['../struct_texture.html',1,'']]],
-  ['throwiffailed_4',['ThrowIfFailed',['../d3d_util_8h.html#af3892d76181a8a44edbd1a71a6ae9b97',1,'d3dUtil.h']]],
-  ['tick_5',['Tick',['../class_game_timer.html#ac02f02b90ae1c2d6a2834abb5069f367',1,'GameTimer']]],
-  ['tostring_6',['ToString',['../classd3d_util.html#ae0b7d841076df11833db2564c86faefe',1,'d3dUtil::ToString()'],['../class_dx_exception.html#a031a5ff549f043decbe96093e73dac27',1,'DxException::ToString()']]],
-  ['totaltime_7',['TotalTime',['../struct_pass_constants.html#a8b7dc8578d216518bff83264bc85d34c',1,'PassConstants::TotalTime()'],['../class_game_timer.html#a4d51c259eeb170d1841f84f41779592d',1,'GameTimer::TotalTime()']]],
-  ['transparent_8',['Transparent',['../_render_item_8h.html#aa63ede3e7371d4bc358f651428d23159a3d971943089a3388c01fb297a32d9ba7',1,'RenderItem.h']]],
-  ['tree_9',['tree',['../class_world.html#a4e6fef518f92c7ff760867f36c860885',1,'World']]],
-  ['tree2_10',['tree2',['../class_world.html#a36aeb59490baf5d2e41147b507015ef5',1,'World']]],
-  ['tree3_11',['tree3',['../class_world.html#a9a0fa5311d61c9ccda4cfe306c4a0ca5',1,'World']]],
-  ['tree4_12',['tree4',['../class_world.html#acaaf78a76d0f82a51ed75d44d09207bb',1,'World']]],
-  ['tree5_13',['tree5',['../class_world.html#afd78ca20ed6e5237a9309169a153795e',1,'World']]],
-  ['tree6_14',['tree6',['../class_world.html#abd3d97e46c3b360785626c657ce7e779',1,'World']]]
+  ['uint16_0',['uint16',['../class_geometry_generator.html#a2b566f68436d7cca7976e6d7e3bae53d',1,'GeometryGenerator']]],
+  ['uint32_1',['uint32',['../class_geometry_generator.html#a37fc6dd464913f90a718f59862a9beeb',1,'GeometryGenerator']]],
+  ['update_2',['Update',['../class_aircraft.html#a5b6aa652ded773918ad1e5e6a2ad49bd',1,'Aircraft::Update()'],['../class_d3_d_app.html#ae31029e118e14ee3ae4649f1c6f8d2dd',1,'D3DApp::Update()'],['../class_entity.html#ac4025ea862585a94f6e27cecfae9423e',1,'Entity::Update()'],['../class_player.html#a7b8ee868edd6de769ec57985b19a04d5',1,'Player::Update()'],['../class_scene_node.html#aa801e799edb585d7e371ffacf4786f94',1,'SceneNode::Update()'],['../class_wingman.html#a66c661224d0daed23f4116e1fbbee2ac',1,'Wingman::Update()'],['../class_world.html#a2855c23b04b207643d162e3f4d2dd6f8',1,'World::Update()']]],
+  ['updateviewmatrix_3',['UpdateViewMatrix',['../class_camera.html#a69369efae2a33da50510cc8c43c58bc5',1,'Camera']]],
+  ['uploadbuffer_4',['UploadBuffer',['../class_upload_buffer.html',1,'UploadBuffer&lt; T &gt;'],['../class_upload_buffer.html#a622fad9645e52e4d6074a2e533165855',1,'UploadBuffer::UploadBuffer(ID3D12Device *device, UINT elementCount, bool isConstantBuffer)'],['../class_upload_buffer.html#aa6d59b50f752d27d3d13cc40fe34db85',1,'UploadBuffer::UploadBuffer(const UploadBuffer &amp;rhs)=delete']]],
+  ['uploadbuffer_2eh_5',['UploadBuffer.h',['../_upload_buffer_8h.html',1,'']]],
+  ['uploadheap_6',['UploadHeap',['../struct_texture.html#a9e4e92ab08debca51ed2635cd3f9c5a7',1,'Texture']]]
 ];

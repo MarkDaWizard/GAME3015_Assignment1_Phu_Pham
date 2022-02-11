@@ -2,90 +2,109 @@
 \label{_game_class_8h_source}\index{GAME3015\_Assignment1\_Phu\_Pham/GameClass.h@{GAME3015\_Assignment1\_Phu\_Pham/GameClass.h}}
 \mbox{\hyperlink{_game_class_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
-\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_upload_buffer_8h}{Common/UploadBuffer.h}}"{}}}
-\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_geometry_generator_8h}{Common/GeometryGenerator.h}}"{}}}
-\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_frame_resource_8h}{FrameResource.h}}"{}}}
-\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_world_8h}{World.h}}"{}}}
-\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <map>}}
-\DoxyCodeLine{7 }
-\DoxyCodeLine{8 \textcolor{keyword}{using} Microsoft::WRL::ComPtr;}
-\DoxyCodeLine{9 \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{_game_class_8h_a7c82b7821d2662eb6e0cfdc08a6c4bd4}{gNumFrameResources}} = 3;}
-\DoxyCodeLine{10 }
-\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_game}{Game}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_d3_d_app}{D3DApp}}}
-\DoxyCodeLine{12 \{}
-\DoxyCodeLine{13 \textcolor{keyword}{public}:}
-\DoxyCodeLine{14     \mbox{\hyperlink{class_game_a3f68a62a1fe1ca8dcd1deb054b384cef}{Game}}(HINSTANCE hInstance);}
-\DoxyCodeLine{15     \mbox{\hyperlink{class_game_a293c79673d4c15f55f1ab7f3d1809ddb}{Game}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_game}{Game}}\& rhs) = \textcolor{keyword}{delete};}
-\DoxyCodeLine{16     \mbox{\hyperlink{class_game}{Game}}\& \mbox{\hyperlink{class_game_a9bda5763ea460634fef947be2530c8f5}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_game}{Game}}\& rhs) = \textcolor{keyword}{delete};}
-\DoxyCodeLine{17     \mbox{\hyperlink{class_game_ae3d112ca6e0e55150d2fdbc704474530}{\string~Game}}();}
-\DoxyCodeLine{18 }
-\DoxyCodeLine{19     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_game_a16354d232327f6c21319713bf6983674}{Initialize}}()\textcolor{keyword}{override};}
-\DoxyCodeLine{20 }
-\DoxyCodeLine{21 \textcolor{keyword}{private}:}
-\DoxyCodeLine{22     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} OnResize()\textcolor{keyword}{override};}
-\DoxyCodeLine{23     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} Update(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt)\textcolor{keyword}{override};}
-\DoxyCodeLine{24     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} Draw(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt)\textcolor{keyword}{override};}
-\DoxyCodeLine{25 }
-\DoxyCodeLine{26     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} OnMouseDown(WPARAM btnState, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y)\textcolor{keyword}{override};}
-\DoxyCodeLine{27     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} OnMouseUp(WPARAM btnState, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y)\textcolor{keyword}{override};}
-\DoxyCodeLine{28     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} OnMouseMove(WPARAM btnState, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y)\textcolor{keyword}{override};}
-\DoxyCodeLine{29 }
-\DoxyCodeLine{30     \textcolor{keywordtype}{void} OnKeyboardInput(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt);}
-\DoxyCodeLine{31     \textcolor{keywordtype}{void} UpdateCamera(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt);}
-\DoxyCodeLine{32     \textcolor{keywordtype}{void} UpdateObjectCBs(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt);}
-\DoxyCodeLine{33     \textcolor{keywordtype}{void} UpdateMaterialCBs(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt);}
-\DoxyCodeLine{34     \textcolor{keywordtype}{void} UpdateMainPassCB(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt);}
-\DoxyCodeLine{35 }
-\DoxyCodeLine{36     \textcolor{keywordtype}{void} LoadTextures();}
-\DoxyCodeLine{37     \textcolor{keywordtype}{void} LoadTex(std::string name, std::wstring path);}
-\DoxyCodeLine{38     \textcolor{keywordtype}{void} BuildRootSignature();}
-\DoxyCodeLine{39     \textcolor{keywordtype}{void} BuildDescriptorHeaps();}
-\DoxyCodeLine{40     \textcolor{keywordtype}{void} BuildShadersAndInputLayout();}
-\DoxyCodeLine{41 }
-\DoxyCodeLine{42     \textcolor{keywordtype}{void} helpBuildSubMesh(\mbox{\hyperlink{struct_geometry_generator_1_1_mesh_data}{GeometryGenerator::MeshData}} name,}
-\DoxyCodeLine{43         \mbox{\hyperlink{struct_submesh_geometry}{SubmeshGeometry}}\& subName,}
-\DoxyCodeLine{44         UINT nameVertexOffset,}
-\DoxyCodeLine{45         UINT nameIndexOffset);}
-\DoxyCodeLine{46 }
-\DoxyCodeLine{47     \textcolor{keywordtype}{void} BuildShapeGeometry();}
-\DoxyCodeLine{48     \textcolor{keywordtype}{void} BuildShapeRenderItems();}
-\DoxyCodeLine{49     \textcolor{keywordtype}{void} BuildPSOs();}
-\DoxyCodeLine{50     \textcolor{keywordtype}{void} BuildFrameResources();}
-\DoxyCodeLine{51     \textcolor{keywordtype}{void} BuildMaterials();}
-\DoxyCodeLine{52     \textcolor{keywordtype}{void} DrawRenderItems(ID3D12GraphicsCommandList* cmdList, \textcolor{keyword}{const} std::vector<RenderItem*>\& ritems);}
-\DoxyCodeLine{53 }
-\DoxyCodeLine{54     std::array<const CD3DX12\_STATIC\_SAMPLER\_DESC, 6> GetStaticSamplers();}
-\DoxyCodeLine{55 }
-\DoxyCodeLine{56     \textcolor{keywordtype}{float} GetHillsHeight(\textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} z)\textcolor{keyword}{const};}
-\DoxyCodeLine{57     XMFLOAT3 GetHillsNormal(\textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} z)\textcolor{keyword}{const};}
-\DoxyCodeLine{58 }
-\DoxyCodeLine{59 \textcolor{keyword}{private}:}
-\DoxyCodeLine{60 }
-\DoxyCodeLine{61     std::vector<std::unique\_ptr<FrameResource>> mFrameResources;}
-\DoxyCodeLine{62     \mbox{\hyperlink{struct_frame_resource}{FrameResource}}* mCurrFrameResource = \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{63     \textcolor{keywordtype}{int} mCurrFrameResourceIndex = 0;}
-\DoxyCodeLine{64 }
-\DoxyCodeLine{65     UINT mCbvSrvDescriptorSize = 0;}
-\DoxyCodeLine{66 }
-\DoxyCodeLine{67     ComPtr<ID3D12RootSignature> mRootSignature = \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{68 }
-\DoxyCodeLine{69     ComPtr<ID3D12DescriptorHeap> mSrvDescriptorHeap = \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{70     std::map<std::string, std::unique\_ptr<Texture>> mTextures;}
-\DoxyCodeLine{71     std::map<std::string, ComPtr<ID3DBlob>> mShaders;}
-\DoxyCodeLine{72     std::map<std::string, ComPtr<ID3D12PipelineState>> mPSOs;}
+\DoxyCodeLine{1 \textcolor{comment}{//GAME3015-\/Assignment1-\/PhuPham}}
+\DoxyCodeLine{2 \textcolor{comment}{//Name:Phu Pham}}
+\DoxyCodeLine{3 \textcolor{comment}{//ID:101250748}}
+\DoxyCodeLine{4 \textcolor{comment}{//Last Updated: 11/2/2022}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_world_8h}{World.h}}"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_render_item}{RenderItem}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11 \textcolor{keyword}{public}:}
+\DoxyCodeLine{12     \mbox{\hyperlink{class_render_item_ad6c4cbd7fea14ab4b71bd3be38208487}{RenderItem}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{13     XMFLOAT4X4 \mbox{\hyperlink{class_world}{World}} = \mbox{\hyperlink{class_math_helper_a68b4e9af95b1a36aad30ea80839f6b19}{MathHelper::Identity4x4}}();}
+\DoxyCodeLine{14     XMFLOAT4X4 \mbox{\hyperlink{class_render_item_ac6799548474209d172cbb3d337f56074}{TexTransform}} = \mbox{\hyperlink{class_math_helper_a68b4e9af95b1a36aad30ea80839f6b19}{MathHelper::Identity4x4}}();}
+\DoxyCodeLine{15     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_render_item_aca6ae2de91638af530fd5ce91fea3306}{NumFramesDirty}} = 3;}
+\DoxyCodeLine{16     UINT \mbox{\hyperlink{class_render_item_a4a4015284acd79469b70c358b6c1c2a1}{ObjCBIndex}} = -\/1;}
+\DoxyCodeLine{17     \mbox{\hyperlink{struct_material}{Material}}* \mbox{\hyperlink{class_render_item_a47f9e6fad8619fccc9caa92e3c7c9793}{Mat}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{18     \mbox{\hyperlink{struct_mesh_geometry}{MeshGeometry}}* \mbox{\hyperlink{class_render_item_a61681a415ceebcbc0b8f07d616124deb}{Geo}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{19     D3D12\_PRIMITIVE\_TOPOLOGY \mbox{\hyperlink{class_render_item_ab3aad9050526250c4877956789e50b3a}{PrimitiveType}} = D3D11\_PRIMITIVE\_TOPOLOGY\_TRIANGLELIST;}
+\DoxyCodeLine{20     UINT \mbox{\hyperlink{class_render_item_ad95fafa012c0d99c216b998f11207e38}{IndexCount}} = 0;}
+\DoxyCodeLine{21     UINT \mbox{\hyperlink{class_render_item_a979179c6dd354cd329563e3599245463}{StartIndexLocation}} = 0;}
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_render_item_a3750ef7b2791ea922df46e222649f3dc}{BaseVertexLocation}} = 0;}
+\DoxyCodeLine{23 \};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{enum class} \mbox{\hyperlink{_game_class_8h_aa63ede3e7371d4bc358f651428d23159}{RenderLayer}} : \textcolor{keywordtype}{int}}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27     \mbox{\hyperlink{_game_8h_aa63ede3e7371d4bc358f651428d23159afaa90538de35640e4b1e31ccf35b6eb5}{Opaque}} = 0,}
+\DoxyCodeLine{28     \mbox{\hyperlink{_game_8h_aa63ede3e7371d4bc358f651428d23159a3d971943089a3388c01fb297a32d9ba7}{Transparent}},}
+\DoxyCodeLine{29     \mbox{\hyperlink{_game_8h_aa63ede3e7371d4bc358f651428d23159a0627db3fa05f110738a259ea9a97a225}{AlphaTested}},}
+\DoxyCodeLine{30     \mbox{\hyperlink{_game_8h_aa63ede3e7371d4bc358f651428d23159ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}}}
+\DoxyCodeLine{31 \};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keyword}{class }\mbox{\hyperlink{class_game}{Game}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_d3_d_app}{D3DApp}}}
+\DoxyCodeLine{34 \{}
+\DoxyCodeLine{35 \textcolor{keyword}{public}:}
+\DoxyCodeLine{36     \mbox{\hyperlink{class_game_a3f68a62a1fe1ca8dcd1deb054b384cef}{Game}}(HINSTANCE hInstance);}
+\DoxyCodeLine{37     \mbox{\hyperlink{class_game_a293c79673d4c15f55f1ab7f3d1809ddb}{Game}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_game}{Game}}\& rhs) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{38     \mbox{\hyperlink{class_game}{Game}}\& \mbox{\hyperlink{class_game_a9bda5763ea460634fef947be2530c8f5}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_game}{Game}}\& rhs) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{39     \mbox{\hyperlink{class_game_ae3d112ca6e0e55150d2fdbc704474530}{\string~Game}}();}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_game_a904d3bbf91971c71986d9c414850cf04}{Initialize}}()\textcolor{keyword}{override};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keyword}{private}:}
+\DoxyCodeLine{44     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} OnResize()\textcolor{keyword}{override};}
+\DoxyCodeLine{45     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} Update(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt)\textcolor{keyword}{override};}
+\DoxyCodeLine{46     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} Draw(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt)\textcolor{keyword}{override};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} OnMouseDown(WPARAM btnState, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y)\textcolor{keyword}{override};}
+\DoxyCodeLine{49     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} OnMouseUp(WPARAM btnState, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y)\textcolor{keyword}{override};}
+\DoxyCodeLine{50     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} OnMouseMove(WPARAM btnState, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y)\textcolor{keyword}{override};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} OnKeyboardInput(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt);}
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} UpdateCamera(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt);}
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} UpdateObjectCBs(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt);}
+\DoxyCodeLine{55     \textcolor{keywordtype}{void} UpdateMaterialCBs(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt);}
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} UpdateMainPassCB(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt);}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} helpBuildSubMesh(\mbox{\hyperlink{struct_geometry_generator_1_1_mesh_data}{GeometryGenerator::MeshData}} name, \mbox{\hyperlink{struct_submesh_geometry}{SubmeshGeometry}}\& subName, UINT nameVertexOffset, UINT nameIndexOffset);}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     \textcolor{keywordtype}{void} LoadTextures();}
+\DoxyCodeLine{61     \textcolor{keywordtype}{void} LoadTex(std::string name, std::wstring path);}
+\DoxyCodeLine{62     \textcolor{keywordtype}{void} BuildRootSignature();}
+\DoxyCodeLine{63     \textcolor{keywordtype}{void} BuildDescriptorHeaps();}
+\DoxyCodeLine{64     \textcolor{keywordtype}{void} BuildShadersAndInputLayout();}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66     \textcolor{keywordtype}{void} BuildShapeGeometry();}
+\DoxyCodeLine{67     \textcolor{keywordtype}{void} BuildShapeRenderItems();}
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} BuildPSOs();}
+\DoxyCodeLine{69     \textcolor{keywordtype}{void} BuildFrameResources();}
+\DoxyCodeLine{70     \textcolor{keywordtype}{void} BuildMaterials();}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72     std::array<const CD3DX12\_STATIC\_SAMPLER\_DESC, 6> GetStaticSamplers();}
 \DoxyCodeLine{73 }
-\DoxyCodeLine{74     std::vector<D3D12\_INPUT\_ELEMENT\_DESC> mInputLayout;}
-\DoxyCodeLine{75 }
-\DoxyCodeLine{76     \mbox{\hyperlink{struct_pass_constants}{PassConstants}} mMainPassCB;}
+\DoxyCodeLine{74     \textcolor{keywordtype}{float} GetHillsHeight(\textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} z)\textcolor{keyword}{const};}
+\DoxyCodeLine{75     XMFLOAT3 GetHillsNormal(\textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} z)\textcolor{keyword}{const};}
+\DoxyCodeLine{76     \textcolor{keywordtype}{void} DrawRenderItems(ID3D12GraphicsCommandList* cmdList, \textcolor{keyword}{const} std::vector<RenderItem*>\& ritems);}
 \DoxyCodeLine{77 }
-\DoxyCodeLine{78     XMFLOAT3 mEyePos = \{ 0.0f, 0.0f, 0.0f \};}
-\DoxyCodeLine{79     XMFLOAT4X4 mView = \mbox{\hyperlink{class_math_helper_a68b4e9af95b1a36aad30ea80839f6b19}{MathHelper::Identity4x4}}();}
-\DoxyCodeLine{80     XMFLOAT4X4 mProj = \mbox{\hyperlink{class_math_helper_a68b4e9af95b1a36aad30ea80839f6b19}{MathHelper::Identity4x4}}();}
-\DoxyCodeLine{81 }
-\DoxyCodeLine{82     POINT mLastMousePos;}
+\DoxyCodeLine{78 \textcolor{keyword}{private}:}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80     std::vector<std::unique\_ptr<FrameResource>> m\_FrameResources;}
+\DoxyCodeLine{81     \mbox{\hyperlink{struct_frame_resource}{FrameResource}}* m\_CurrFrameResource = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{82     \textcolor{keywordtype}{int} m\_CurrFrameResourceIndex = 0;}
 \DoxyCodeLine{83 }
-\DoxyCodeLine{84     \mbox{\hyperlink{class_world}{World}}* world = \textcolor{keyword}{new} \mbox{\hyperlink{class_world}{World}}();}
-\DoxyCodeLine{85 \};}
+\DoxyCodeLine{84     UINT m\_CbvSrvDescriptorSize = 0;}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86     ComPtr<ID3D12RootSignature> m\_RootSignature = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88     ComPtr<ID3D12DescriptorHeap> m\_SrvDescriptorHeap = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{89     std::map<std::string, std::unique\_ptr<Texture>> m\_Textures;}
+\DoxyCodeLine{90     std::map<std::string, ComPtr<ID3DBlob>> m\_Shaders;}
+\DoxyCodeLine{91     std::map<std::string, ComPtr<ID3D12PipelineState>> m\_PSOs;}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93     std::vector<D3D12\_INPUT\_ELEMENT\_DESC> m\_InputLayout;}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95     \mbox{\hyperlink{struct_pass_constants}{PassConstants}} m\_MainPassCB;}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97     XMFLOAT3 m\_EyePos = \{ 0.0f, 0.0f, 0.0f \};}
+\DoxyCodeLine{98     XMFLOAT4X4 m\_View = \mbox{\hyperlink{class_math_helper_a68b4e9af95b1a36aad30ea80839f6b19}{MathHelper::Identity4x4}}();}
+\DoxyCodeLine{99     XMFLOAT4X4 m\_Proj = \mbox{\hyperlink{class_math_helper_a68b4e9af95b1a36aad30ea80839f6b19}{MathHelper::Identity4x4}}();}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101     POINT m\_LastMousePos;}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103     \mbox{\hyperlink{class_world}{World}}* world = \textcolor{keyword}{new} \mbox{\hyperlink{class_world}{World}}();}
+\DoxyCodeLine{104 \};}
 
 \end{DoxyCode}

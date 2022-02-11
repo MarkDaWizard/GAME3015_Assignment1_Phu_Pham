@@ -14,6 +14,5 @@ var d3d_util_8h =
     [ "AnsiToWString", "d3d_util_8h.html#a945382836f0cc7b4a16495f63cc76975", null ],
     [ "d3dSetDebugName", "d3d_util_8h.html#a30106e226f471b23181adaf7d9a422a3", null ],
     [ "d3dSetDebugName", "d3d_util_8h.html#a096d87a02e29abc03ea7fd0d1b3e64d9", null ],
-    [ "d3dSetDebugName", "d3d_util_8h.html#a8eea9d84f47bf09194e47e7cffe1ef0d", null ],
-    [ "gNumFrameResources", "d3d_util_8h.html#a7c82b7821d2662eb6e0cfdc08a6c4bd4", null ]
+    [ "d3dSetDebugName", "d3d_util_8h.html#a8eea9d84f47bf09194e47e7cffe1ef0d", null ]
 ];

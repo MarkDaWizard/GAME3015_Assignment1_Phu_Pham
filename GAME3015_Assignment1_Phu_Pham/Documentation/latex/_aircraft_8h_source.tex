@@ -2,23 +2,29 @@
 \label{_aircraft_8h_source}\index{GAME3015\_Assignment1\_Phu\_Pham/Aircraft.h@{GAME3015\_Assignment1\_Phu\_Pham/Aircraft.h}}
 \mbox{\hyperlink{_aircraft_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{1 \textcolor{comment}{//GAME3015-\/Assignment1-\/Phu-\/Pham}}
-\DoxyCodeLine{2 \textcolor{comment}{//10/2/2022}}
-\DoxyCodeLine{3 \textcolor{comment}{//Name: Phu Pham}}
-\DoxyCodeLine{4 \textcolor{comment}{//ID: 101250748}}
-\DoxyCodeLine{5 \textcolor{preprocessor}{\#pragma once}}
-\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_entity_8h}{Entity.h}}"{}}}
-\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{d3d_util_8h}{Common/d3dUtil.h}}"{}}}
-\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_game_timer_8h}{Common/GameTimer.h}}"{}}}
-\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_aircraft}{Aircraft}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_entity}{Entity}}}
-\DoxyCodeLine{10 \{}
-\DoxyCodeLine{11 \textcolor{keyword}{public}:}
-\DoxyCodeLine{12     \mbox{\hyperlink{class_aircraft_a187c2e256b8c9c3f2f499f16fec31941}{Aircraft}}() \{\};}
-\DoxyCodeLine{13     \mbox{\hyperlink{class_aircraft_a187c2e256b8c9c3f2f499f16fec31941}{Aircraft}}(XMFLOAT3 position, XMFLOAT3 scale);}
-\DoxyCodeLine{14     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_aircraft_ae9b9312261d40a6d13a28d8c5a495bcc}{Move}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt);}
-\DoxyCodeLine{15 }
-\DoxyCodeLine{16     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_aircraft_a175e57562b3ee31f2f473ffe7b420550}{Update}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_game_timer}{GameTimer}}\& gt);}
-\DoxyCodeLine{17 \};}
-\DoxyCodeLine{18 }
+\DoxyCodeLine{1 \textcolor{comment}{//GAME3015-\/Assignment1-\/PhuPham}}
+\DoxyCodeLine{2 \textcolor{comment}{//Name:Phu Pham}}
+\DoxyCodeLine{3 \textcolor{comment}{//ID:101250748}}
+\DoxyCodeLine{4 \textcolor{comment}{//Last Updated: 11/2/2022}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_entity_8h}{Entity.h}}"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_aircraft}{Aircraft}}  :}
+\DoxyCodeLine{14     \textcolor{keyword}{public} \mbox{\hyperlink{class_entity}{Entity}}}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_aircraft_a187c2e256b8c9c3f2f499f16fec31941}{Aircraft}}();}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_aircraft_aafd3e0af1c6b0b376d3da898d16a4ad1}{\string~Aircraft}}();}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{private}:}
+\DoxyCodeLine{21     \textcolor{keywordtype}{float}   m\_Dir;}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_aircraft_a5b6aa652ded773918ad1e5e6a2ad49bd}{Update}}(\textcolor{keywordtype}{float} DeltaTime, \textcolor{keyword}{struct} \mbox{\hyperlink{struct_frame_resource}{FrameResource}}* Frame);}
+\DoxyCodeLine{25     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_aircraft_a9ac5b18ff8fb21a428b43a1e5186da3f}{Draw}}(ID3D12GraphicsCommandList* CmdList, \textcolor{keywordtype}{float} DeltaTime);}
+\DoxyCodeLine{26 \};}
+\DoxyCodeLine{27 }
 
 \end{DoxyCode}

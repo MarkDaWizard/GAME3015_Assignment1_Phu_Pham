@@ -1,8 +1,12 @@
 var searchData=
 [
-  ['name_0',['Name',['../struct_mesh_geometry.html#a9cfdc0d2b907a9059b32fccae59d9813',1,'MeshGeometry::Name()'],['../struct_material.html#a793dc9034c137caf3d8b3b4b0f9d451b',1,'Material::Name()'],['../struct_texture.html#aff942a6e6a80c06965b239a73ad04a2d',1,'Texture::Name()']]],
-  ['nearz_1',['NearZ',['../struct_pass_constants.html#affe3124795eccdba77dae8cef5399e7d',1,'PassConstants']]],
-  ['normal_2',['Normal',['../struct_geometry_generator_1_1_vertex.html#ab09e39b41f227072d8d24768b464eaa8',1,'GeometryGenerator::Vertex::Normal()'],['../struct_vertex.html#a553ed48ae98dda36da8e57cfa53877d4',1,'Vertex::Normal()']]],
-  ['normalsrvheapindex_3',['NormalSrvHeapIndex',['../struct_material.html#af6139531ff098c78d4d03d2fa232f27e',1,'Material']]],
-  ['numframesdirty_4',['NumFramesDirty',['../struct_material.html#aacbebebfe577cd18d8652a01e8fae8c0',1,'Material::NumFramesDirty()'],['../class_render_item.html#aca6ae2de91638af530fd5ce91fea3306',1,'RenderItem::NumFramesDirty()']]]
+  ['objcbindex_0',['ObjCBIndex',['../class_render_item.html#a4a4015284acd79469b70c358b6c1c2a1',1,'RenderItem']]],
+  ['objectcb_1',['ObjectCB',['../struct_frame_resource.html#adec81cdfb788278fac8ad38066e6c18f',1,'FrameResource']]],
+  ['objectconstants_2',['ObjectConstants',['../struct_object_constants.html',1,'']]],
+  ['onmousedown_3',['OnMouseDown',['../class_d3_d_app.html#afa0d546d52408a9b55866e6ba065ddae',1,'D3DApp']]],
+  ['onmousemove_4',['OnMouseMove',['../class_d3_d_app.html#aa5270048920cd8a62dc07c7ed5e97622',1,'D3DApp']]],
+  ['onmouseup_5',['OnMouseUp',['../class_d3_d_app.html#a98be07429ac3ffb5f76cbe831f9d94de',1,'D3DApp']]],
+  ['onresize_6',['OnResize',['../class_d3_d_app.html#a4c1b99cd01576c413d3a50d1435f1b8a',1,'D3DApp']]],
+  ['opaque_7',['Opaque',['../_game_8h.html#aa63ede3e7371d4bc358f651428d23159afaa90538de35640e4b1e31ccf35b6eb5',1,'Opaque():&#160;Game.h'],['../_game_class_8h.html#aa63ede3e7371d4bc358f651428d23159afaa90538de35640e4b1e31ccf35b6eb5',1,'Opaque():&#160;GameClass.h'],['../_render_item_8h.html#aa63ede3e7371d4bc358f651428d23159afaa90538de35640e4b1e31ccf35b6eb5',1,'Opaque():&#160;RenderItem.h'],['../_game_8h.html#aa63ede3e7371d4bc358f651428d23159afaa90538de35640e4b1e31ccf35b6eb5',1,'Opaque():&#160;Game.h'],['../_game_class_8h.html#aa63ede3e7371d4bc358f651428d23159afaa90538de35640e4b1e31ccf35b6eb5',1,'Opaque():&#160;GameClass.h'],['../_render_item_8h.html#aa63ede3e7371d4bc358f651428d23159afaa90538de35640e4b1e31ccf35b6eb5',1,'Opaque():&#160;RenderItem.h'],['../_game_8h.html#aa63ede3e7371d4bc358f651428d23159afaa90538de35640e4b1e31ccf35b6eb5',1,'Opaque():&#160;Game.h'],['../_game_class_8h.html#aa63ede3e7371d4bc358f651428d23159afaa90538de35640e4b1e31ccf35b6eb5',1,'Opaque():&#160;GameClass.h'],['../_render_item_8h.html#aa63ede3e7371d4bc358f651428d23159afaa90538de35640e4b1e31ccf35b6eb5',1,'Opaque():&#160;RenderItem.h']]],
+  ['operator_3d_8',['operator=',['../class_d3_d_app.html#a973e1436e4ba07338548073a49f8a253',1,'D3DApp::operator=()'],['../class_upload_buffer.html#a279ae8958cebcdb24f5e167a675ad9ce',1,'UploadBuffer::operator=()'],['../struct_frame_resource.html#a4d75d2a5a7bca5a0bd70a15b449c5776',1,'FrameResource::operator=()'],['../class_game.html#a9bda5763ea460634fef947be2530c8f5',1,'Game::operator=(const Game &amp;rhs)=delete'],['../class_game.html#a9bda5763ea460634fef947be2530c8f5',1,'Game::operator=(const Game &amp;rhs)=delete']]]
 ];

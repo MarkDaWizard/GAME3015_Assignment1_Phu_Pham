@@ -2,6 +2,11 @@
 \label{class_aircraft}\index{Aircraft@{Aircraft}}
 
 
+Enemy class, derived from \mbox{\hyperlink{class_entity}{Entity}}  
+
+
+
+
 {\ttfamily \#include $<$Aircraft.\+h$>$}
 
 Inheritance diagram for Aircraft\+:\begin{figure}[H]
@@ -15,42 +20,57 @@ Inheritance diagram for Aircraft\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{class_aircraft_a187c2e256b8c9c3f2f499f16fec31941}{Aircraft}} ()
 \item 
-\mbox{\hyperlink{class_aircraft_a264d4cee48e939f45cf387afb6602df7}{Aircraft}} (XMFLOAT3 position, XMFLOAT3 scale)
+\mbox{\hyperlink{class_aircraft_aafd3e0af1c6b0b376d3da898d16a4ad1}{$\sim$\+Aircraft}} ()
 \item 
-void \mbox{\hyperlink{class_aircraft_ae9b9312261d40a6d13a28d8c5a495bcc}{Move}} (const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&gt)
-\item 
-void \mbox{\hyperlink{class_aircraft_a175e57562b3ee31f2f473ffe7b420550}{Update}} (const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&gt)
+virtual void \mbox{\hyperlink{class_aircraft_a5b6aa652ded773918ad1e5e6a2ad49bd}{Update}} (float Delta\+Time, struct \mbox{\hyperlink{struct_frame_resource}{Frame\+Resource}} $\ast$Frame)
+\begin{DoxyCompactList}\small\item\em Simple script that prevents going out of bounds \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_aircraft_a9ac5b18ff8fb21a428b43a1e5186da3f}{Draw}} (ID3\+D12\+Graphics\+Command\+List $\ast$Cmd\+List, float Delta\+Time)
 \end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
+
+\doxysubsection{Detailed Description}
+Enemy class, derived from \mbox{\hyperlink{class_entity}{Entity}} 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_aircraft_a187c2e256b8c9c3f2f499f16fec31941}\label{class_aircraft_a187c2e256b8c9c3f2f499f16fec31941}} 
 \index{Aircraft@{Aircraft}!Aircraft@{Aircraft}}
 \index{Aircraft@{Aircraft}!Aircraft@{Aircraft}}
-\doxysubsubsection{\texorpdfstring{Aircraft()}{Aircraft()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Aircraft\+::\+Aircraft (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\doxysubsubsection{\texorpdfstring{Aircraft()}{Aircraft()}}
+{\footnotesize\ttfamily Aircraft\+::\+Aircraft (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_aircraft_a264d4cee48e939f45cf387afb6602df7}\label{class_aircraft_a264d4cee48e939f45cf387afb6602df7}} 
-\index{Aircraft@{Aircraft}!Aircraft@{Aircraft}}
-\index{Aircraft@{Aircraft}!Aircraft@{Aircraft}}
-\doxysubsubsection{\texorpdfstring{Aircraft()}{Aircraft()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Aircraft\+::\+Aircraft (\begin{DoxyParamCaption}\item[{XMFLOAT3}]{position,  }\item[{XMFLOAT3}]{scale }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_aircraft_aafd3e0af1c6b0b376d3da898d16a4ad1}\label{class_aircraft_aafd3e0af1c6b0b376d3da898d16a4ad1}} 
+\index{Aircraft@{Aircraft}!````~Aircraft@{$\sim$Aircraft}}
+\index{````~Aircraft@{$\sim$Aircraft}!Aircraft@{Aircraft}}
+\doxysubsubsection{\texorpdfstring{$\sim$Aircraft()}{~Aircraft()}}
+{\footnotesize\ttfamily Aircraft\+::$\sim$\+Aircraft (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_aircraft_ae9b9312261d40a6d13a28d8c5a495bcc}\label{class_aircraft_ae9b9312261d40a6d13a28d8c5a495bcc}} 
-\index{Aircraft@{Aircraft}!Move@{Move}}
-\index{Move@{Move}!Aircraft@{Aircraft}}
-\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
-{\footnotesize\ttfamily void Aircraft\+::\+Move (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&}]{gt }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_aircraft_a9ac5b18ff8fb21a428b43a1e5186da3f}\label{class_aircraft_a9ac5b18ff8fb21a428b43a1e5186da3f}} 
+\index{Aircraft@{Aircraft}!Draw@{Draw}}
+\index{Draw@{Draw}!Aircraft@{Aircraft}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Aircraft\+::\+Draw (\begin{DoxyParamCaption}\item[{ID3\+D12\+Graphics\+Command\+List $\ast$}]{Cmd\+List,  }\item[{float}]{Delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-\mbox{\Hypertarget{class_aircraft_a175e57562b3ee31f2f473ffe7b420550}\label{class_aircraft_a175e57562b3ee31f2f473ffe7b420550}} 
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_acd47026ad7c92f1fbc74aebf6cc21c73}{Entity}}.
+
+\mbox{\Hypertarget{class_aircraft_a5b6aa652ded773918ad1e5e6a2ad49bd}\label{class_aircraft_a5b6aa652ded773918ad1e5e6a2ad49bd}} 
 \index{Aircraft@{Aircraft}!Update@{Update}}
 \index{Update@{Update}!Aircraft@{Aircraft}}
 \doxysubsubsection{\texorpdfstring{Update()}{Update()}}
-{\footnotesize\ttfamily void Aircraft\+::\+Update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_timer}{Game\+Timer}} \&}]{gt }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Aircraft\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time,  }\item[{struct \mbox{\hyperlink{struct_frame_resource}{Frame\+Resource}} $\ast$}]{Frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Simple script that prevents going out of bounds 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_ac4025ea862585a94f6e27cecfae9423e}{Entity}}.
 
 
 

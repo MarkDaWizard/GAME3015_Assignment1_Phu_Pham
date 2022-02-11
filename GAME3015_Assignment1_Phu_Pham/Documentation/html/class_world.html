@@ -99,59 +99,61 @@ $(document).ready(function(){initNavTree('class_world.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 
+<p>Handles all objects that are built in <a class="el" href="class_world.html" title="Handles all objects that are built in World">World</a>  
+ <a href="class_world.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_world_8h_source.html">World.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3950826d9f256fa8516c3419d50553fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a3950826d9f256fa8516c3419d50553fd">buildWorld</a> ()</td></tr>
-<tr class="separator:a3950826d9f256fa8516c3419d50553fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3294ab79d9610b2659dcb57cb5638637"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a3294ab79d9610b2659dcb57cb5638637">Update</a> (const <a class="el" href="class_game_timer.html">GameTimer</a> &amp;gt)</td></tr>
-<tr class="separator:a3294ab79d9610b2659dcb57cb5638637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa39d4e6f714a7a3691ac0c656f5e8a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#afa39d4e6f714a7a3691ac0c656f5e8a8">World</a> ()</td></tr>
+<tr class="separator:afa39d4e6f714a7a3691ac0c656f5e8a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c73fba541a5817fff65147ba47cd827"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a8c73fba541a5817fff65147ba47cd827">~World</a> ()</td></tr>
+<tr class="separator:a8c73fba541a5817fff65147ba47cd827"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd649dca4bf0608df6fb6d153e2274c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#acd649dca4bf0608df6fb6d153e2274c8">Build</a> (ID3D12Device *Device, ID3D12GraphicsCommandList *CmdList)</td></tr>
+<tr class="memdesc:acd649dca4bf0608df6fb6d153e2274c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build all objects in game world  <a href="class_world.html#acd649dca4bf0608df6fb6d153e2274c8">More...</a><br /></td></tr>
+<tr class="separator:acd649dca4bf0608df6fb6d153e2274c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2855c23b04b207643d162e3f4d2dd6f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a2855c23b04b207643d162e3f4d2dd6f8">Update</a> (float DeltaTime, struct <a class="el" href="struct_frame_resource.html">FrameResource</a> *Frame)</td></tr>
+<tr class="memdesc:a2855c23b04b207643d162e3f4d2dd6f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update root node and scroll the background  <a href="class_world.html#a2855c23b04b207643d162e3f4d2dd6f8">More...</a><br /></td></tr>
+<tr class="separator:a2855c23b04b207643d162e3f4d2dd6f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49d6a1ac236041e2d71fdca61adf31e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a49d6a1ac236041e2d71fdca61adf31e3">Draw</a> (ID3D12GraphicsCommandList *CmdList, ID3D12DescriptorHeap *Desc, UINT DescSize, struct <a class="el" href="struct_frame_resource.html">FrameResource</a> *Frame, float DeltaTime)</td></tr>
+<tr class="memdesc:a49d6a1ac236041e2d71fdca61adf31e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw all objects in game world  <a href="class_world.html#a49d6a1ac236041e2d71fdca61adf31e3">More...</a><br /></td></tr>
+<tr class="separator:a49d6a1ac236041e2d71fdca61adf31e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a8a66d2af820e360ecbcb8ce0a56c6bb6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_entity.html">Entity</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a8a66d2af820e360ecbcb8ce0a56c6bb6">AllEntities</a></td></tr>
-<tr class="separator:a8a66d2af820e360ecbcb8ce0a56c6bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dfcc38e198b6dac0050010cc4ab4dc8"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::unique_ptr&lt; <a class="el" href="struct_mesh_geometry.html">MeshGeometry</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a6dfcc38e198b6dac0050010cc4ab4dc8">mGeometries</a></td></tr>
-<tr class="separator:a6dfcc38e198b6dac0050010cc4ab4dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41a3d6173080108bd85c1224d3cca933"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scene_node.html">SceneNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a41a3d6173080108bd85c1224d3cca933">m_RootNode</a></td></tr>
+<tr class="separator:a41a3d6173080108bd85c1224d3cca933"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3af5b8b78b28110b3d60541b5744f9f"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::unique_ptr&lt; <a class="el" href="struct_material.html">Material</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#aa3af5b8b78b28110b3d60541b5744f9f">mMaterials</a></td></tr>
 <tr class="separator:aa3af5b8b78b28110b3d60541b5744f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d7fd8917bbec5cc9beac87015b71b56"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; <a class="el" href="class_render_item.html">RenderItem</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a2d7fd8917bbec5cc9beac87015b71b56">mAllRitems</a></td></tr>
-<tr class="separator:a2d7fd8917bbec5cc9beac87015b71b56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab035a339dace99b036b76f3e4a328b01"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_render_item.html">RenderItem</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#ab035a339dace99b036b76f3e4a328b01">mRitemLayer</a> [(int) <a class="el" href="_render_item_8h.html#aa63ede3e7371d4bc358f651428d23159ae93f994f01c537c4e2f7d8528c3eb5e9">RenderLayer::Count</a>]</td></tr>
-<tr class="separator:ab035a339dace99b036b76f3e4a328b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8080abc5255a60121bee3f4474452aca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_aircraft.html">Aircraft</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a8080abc5255a60121bee3f4474452aca">jet</a> = new <a class="el" href="class_aircraft.html">Aircraft</a>()</td></tr>
-<tr class="separator:a8080abc5255a60121bee3f4474452aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54e5a606e9c617ab76e21868560afa72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wingman.html">Wingman</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a54e5a606e9c617ab76e21868560afa72">wingman1</a> = new <a class="el" href="class_wingman.html">Wingman</a>()</td></tr>
-<tr class="separator:a54e5a606e9c617ab76e21868560afa72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51ce2c1839e255bdbb2c377858f50525"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wingman.html">Wingman</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a51ce2c1839e255bdbb2c377858f50525">wingman2</a> = new <a class="el" href="class_wingman.html">Wingman</a>()</td></tr>
-<tr class="separator:a51ce2c1839e255bdbb2c377858f50525"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2f967170b9aceddd9cfa7de640c80a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_enemy.html">Enemy</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#ac2f967170b9aceddd9cfa7de640c80a1">enemy</a> = new <a class="el" href="class_enemy.html">Enemy</a>()</td></tr>
-<tr class="separator:ac2f967170b9aceddd9cfa7de640c80a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f2c18a4970eb7e9df0b5ba99a4b364b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_enemy.html">Enemy</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a0f2c18a4970eb7e9df0b5ba99a4b364b">enemy2</a> = new <a class="el" href="class_enemy.html">Enemy</a>()</td></tr>
-<tr class="separator:a0f2c18a4970eb7e9df0b5ba99a4b364b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e6fef518f92c7ff760867f36c860885"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wingman.html">Wingman</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a4e6fef518f92c7ff760867f36c860885">tree</a> = new <a class="el" href="class_wingman.html">Wingman</a>()</td></tr>
-<tr class="separator:a4e6fef518f92c7ff760867f36c860885"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36aeb59490baf5d2e41147b507015ef5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wingman.html">Wingman</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a36aeb59490baf5d2e41147b507015ef5">tree2</a> = new <a class="el" href="class_wingman.html">Wingman</a>()</td></tr>
-<tr class="separator:a36aeb59490baf5d2e41147b507015ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a0fa5311d61c9ccda4cfe306c4a0ca5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wingman.html">Wingman</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a9a0fa5311d61c9ccda4cfe306c4a0ca5">tree3</a> = new <a class="el" href="class_wingman.html">Wingman</a>()</td></tr>
-<tr class="separator:a9a0fa5311d61c9ccda4cfe306c4a0ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acaaf78a76d0f82a51ed75d44d09207bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wingman.html">Wingman</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#acaaf78a76d0f82a51ed75d44d09207bb">tree4</a> = new <a class="el" href="class_wingman.html">Wingman</a>()</td></tr>
-<tr class="separator:acaaf78a76d0f82a51ed75d44d09207bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd78ca20ed6e5237a9309169a153795e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wingman.html">Wingman</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#afd78ca20ed6e5237a9309169a153795e">tree5</a> = new <a class="el" href="class_wingman.html">Wingman</a>()</td></tr>
-<tr class="separator:afd78ca20ed6e5237a9309169a153795e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd3d97e46c3b360785626c657ce7e779"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wingman.html">Wingman</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#abd3d97e46c3b360785626c657ce7e779">tree6</a> = new <a class="el" href="class_wingman.html">Wingman</a>()</td></tr>
-<tr class="separator:abd3d97e46c3b360785626c657ce7e779"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23253a80df6ecb711dace56fc3e9ee20"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="class_scene_node.html">SceneNode</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a23253a80df6ecb711dace56fc3e9ee20">m_RenderList</a></td></tr>
+<tr class="separator:a23253a80df6ecb711dace56fc3e9ee20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8e82905815f956a43314e52bfbee9de"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="struct_mesh_geometry.html">MeshGeometry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#ad8e82905815f956a43314e52bfbee9de">m_Mesh</a></td></tr>
+<tr class="separator:ad8e82905815f956a43314e52bfbee9de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ae5b0ba0f1f1424ef998fb29c56abc8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a1ae5b0ba0f1f1424ef998fb29c56abc8">Terrain1</a> = new <a class="el" href="class_entity.html">Entity</a></td></tr>
+<tr class="separator:a1ae5b0ba0f1f1424ef998fb29c56abc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48526edee7b706d3d840222bfd774cb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a48526edee7b706d3d840222bfd774cb5">Terrain2</a> = new <a class="el" href="class_entity.html">Entity</a></td></tr>
+<tr class="separator:a48526edee7b706d3d840222bfd774cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30df3ffd57ab290ba0fe445fda3cba90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a30df3ffd57ab290ba0fe445fda3cba90">Wingman1</a> = new <a class="el" href="class_player.html">Player</a></td></tr>
+<tr class="separator:a30df3ffd57ab290ba0fe445fda3cba90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a340e0b43ca1edc349b4e26c832efd5a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a340e0b43ca1edc349b4e26c832efd5a3">Wingman2</a> = new <a class="el" href="class_player.html">Player</a></td></tr>
+<tr class="separator:a340e0b43ca1edc349b4e26c832efd5a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c438b172f941d8d026dd45ae3ddfc1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_aircraft.html">Aircraft</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a3c438b172f941d8d026dd45ae3ddfc1a">Enemy</a> = new <a class="el" href="class_aircraft.html">Aircraft</a></td></tr>
+<tr class="separator:a3c438b172f941d8d026dd45ae3ddfc1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addf54f12f3a1e9c8f120265bafa3474e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player.html">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#addf54f12f3a1e9c8f120265bafa3474e">player</a> = new <a class="el" href="class_player.html">Player</a></td></tr>
+<tr class="separator:addf54f12f3a1e9c8f120265bafa3474e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3950826d9f256fa8516c3419d50553fd" name="a3950826d9f256fa8516c3419d50553fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3950826d9f256fa8516c3419d50553fd">&#9670;&nbsp;</a></span>buildWorld()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Handles all objects that are built in <a class="el" href="class_world.html" title="Handles all objects that are built in World">World</a> </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="afa39d4e6f714a7a3691ac0c656f5e8a8" name="afa39d4e6f714a7a3691ac0c656f5e8a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa39d4e6f714a7a3691ac0c656f5e8a8">&#9670;&nbsp;</a></span>World()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void World::buildWorld </td>
+          <td class="memname">World::World </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -161,17 +163,16 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a3294ab79d9610b2659dcb57cb5638637" name="a3294ab79d9610b2659dcb57cb5638637"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3294ab79d9610b2659dcb57cb5638637">&#9670;&nbsp;</a></span>Update()</h2>
+<a id="a8c73fba541a5817fff65147ba47cd827" name="a8c73fba541a5817fff65147ba47cd827"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c73fba541a5817fff65147ba47cd827">&#9670;&nbsp;</a></span>~World()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void World::Update </td>
+          <td class="memname">World::~World </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_game_timer.html">GameTimer</a> &amp;&#160;</td>
-          <td class="paramname"><em>gt</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -179,85 +180,166 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="acd649dca4bf0608df6fb6d153e2274c8" name="acd649dca4bf0608df6fb6d153e2274c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd649dca4bf0608df6fb6d153e2274c8">&#9670;&nbsp;</a></span>Build()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void World::Build </td>
+          <td>(</td>
+          <td class="paramtype">ID3D12Device *&#160;</td>
+          <td class="paramname"><em>Device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D12GraphicsCommandList *&#160;</td>
+          <td class="paramname"><em>CmdList</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Build all objects in game world </p>
+
+</div>
+</div>
+<a id="a49d6a1ac236041e2d71fdca61adf31e3" name="a49d6a1ac236041e2d71fdca61adf31e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49d6a1ac236041e2d71fdca61adf31e3">&#9670;&nbsp;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void World::Draw </td>
+          <td>(</td>
+          <td class="paramtype">ID3D12GraphicsCommandList *&#160;</td>
+          <td class="paramname"><em>CmdList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D12DescriptorHeap *&#160;</td>
+          <td class="paramname"><em>Desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>DescSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="struct_frame_resource.html">FrameResource</a> *&#160;</td>
+          <td class="paramname"><em>Frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>DeltaTime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw all objects in game world </p>
+
+</div>
+</div>
+<a id="a2855c23b04b207643d162e3f4d2dd6f8" name="a2855c23b04b207643d162e3f4d2dd6f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2855c23b04b207643d162e3f4d2dd6f8">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void World::Update </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>DeltaTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="struct_frame_resource.html">FrameResource</a> *&#160;</td>
+          <td class="paramname"><em>Frame</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update root node and scroll the background </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a8a66d2af820e360ecbcb8ce0a56c6bb6" name="a8a66d2af820e360ecbcb8ce0a56c6bb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a66d2af820e360ecbcb8ce0a56c6bb6">&#9670;&nbsp;</a></span>AllEntities</h2>
+<a id="a3c438b172f941d8d026dd45ae3ddfc1a" name="a3c438b172f941d8d026dd45ae3ddfc1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c438b172f941d8d026dd45ae3ddfc1a">&#9670;&nbsp;</a></span>Enemy</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="class_entity.html">Entity</a>*&gt; World::AllEntities</td>
+          <td class="memname"><a class="el" href="class_aircraft.html">Aircraft</a>* World::Enemy = new <a class="el" href="class_aircraft.html">Aircraft</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ac2f967170b9aceddd9cfa7de640c80a1" name="ac2f967170b9aceddd9cfa7de640c80a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2f967170b9aceddd9cfa7de640c80a1">&#9670;&nbsp;</a></span>enemy</h2>
+<a id="ad8e82905815f956a43314e52bfbee9de" name="ad8e82905815f956a43314e52bfbee9de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8e82905815f956a43314e52bfbee9de">&#9670;&nbsp;</a></span>m_Mesh</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_enemy.html">Enemy</a>* World::enemy = new <a class="el" href="class_enemy.html">Enemy</a>()</td>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="struct_mesh_geometry.html">MeshGeometry</a>&gt; World::m_Mesh</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a0f2c18a4970eb7e9df0b5ba99a4b364b" name="a0f2c18a4970eb7e9df0b5ba99a4b364b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f2c18a4970eb7e9df0b5ba99a4b364b">&#9670;&nbsp;</a></span>enemy2</h2>
+<a id="a23253a80df6ecb711dace56fc3e9ee20" name="a23253a80df6ecb711dace56fc3e9ee20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23253a80df6ecb711dace56fc3e9ee20">&#9670;&nbsp;</a></span>m_RenderList</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_enemy.html">Enemy</a>* World::enemy2 = new <a class="el" href="class_enemy.html">Enemy</a>()</td>
+          <td class="memname">std::list&lt;<a class="el" href="class_scene_node.html">SceneNode</a>*&gt; World::m_RenderList</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a8080abc5255a60121bee3f4474452aca" name="a8080abc5255a60121bee3f4474452aca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8080abc5255a60121bee3f4474452aca">&#9670;&nbsp;</a></span>jet</h2>
+<a id="a41a3d6173080108bd85c1224d3cca933" name="a41a3d6173080108bd85c1224d3cca933"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41a3d6173080108bd85c1224d3cca933">&#9670;&nbsp;</a></span>m_RootNode</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_aircraft.html">Aircraft</a>* World::jet = new <a class="el" href="class_aircraft.html">Aircraft</a>()</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2d7fd8917bbec5cc9beac87015b71b56" name="a2d7fd8917bbec5cc9beac87015b71b56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d7fd8917bbec5cc9beac87015b71b56">&#9670;&nbsp;</a></span>mAllRitems</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;std::unique_ptr&lt;<a class="el" href="class_render_item.html">RenderItem</a>&gt; &gt; World::mAllRitems</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6dfcc38e198b6dac0050010cc4ab4dc8" name="a6dfcc38e198b6dac0050010cc4ab4dc8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6dfcc38e198b6dac0050010cc4ab4dc8">&#9670;&nbsp;</a></span>mGeometries</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::map&lt;std::string, std::unique_ptr&lt;<a class="el" href="struct_mesh_geometry.html">MeshGeometry</a>&gt; &gt; World::mGeometries</td>
+          <td class="memname"><a class="el" href="class_scene_node.html">SceneNode</a>* World::m_RootNode</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -278,126 +360,70 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ab035a339dace99b036b76f3e4a328b01" name="ab035a339dace99b036b76f3e4a328b01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab035a339dace99b036b76f3e4a328b01">&#9670;&nbsp;</a></span>mRitemLayer</h2>
+<a id="addf54f12f3a1e9c8f120265bafa3474e" name="addf54f12f3a1e9c8f120265bafa3474e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addf54f12f3a1e9c8f120265bafa3474e">&#9670;&nbsp;</a></span>player</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="class_render_item.html">RenderItem</a>*&gt; World::mRitemLayer[(int) <a class="el" href="_render_item_8h.html#aa63ede3e7371d4bc358f651428d23159ae93f994f01c537c4e2f7d8528c3eb5e9">RenderLayer::Count</a>]</td>
+          <td class="memname"><a class="el" href="class_player.html">Player</a>* World::player = new <a class="el" href="class_player.html">Player</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a4e6fef518f92c7ff760867f36c860885" name="a4e6fef518f92c7ff760867f36c860885"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e6fef518f92c7ff760867f36c860885">&#9670;&nbsp;</a></span>tree</h2>
+<a id="a1ae5b0ba0f1f1424ef998fb29c56abc8" name="a1ae5b0ba0f1f1424ef998fb29c56abc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ae5b0ba0f1f1424ef998fb29c56abc8">&#9670;&nbsp;</a></span>Terrain1</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_wingman.html">Wingman</a>* World::tree = new <a class="el" href="class_wingman.html">Wingman</a>()</td>
+          <td class="memname"><a class="el" href="class_entity.html">Entity</a>* World::Terrain1 = new <a class="el" href="class_entity.html">Entity</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a36aeb59490baf5d2e41147b507015ef5" name="a36aeb59490baf5d2e41147b507015ef5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36aeb59490baf5d2e41147b507015ef5">&#9670;&nbsp;</a></span>tree2</h2>
+<a id="a48526edee7b706d3d840222bfd774cb5" name="a48526edee7b706d3d840222bfd774cb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48526edee7b706d3d840222bfd774cb5">&#9670;&nbsp;</a></span>Terrain2</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_wingman.html">Wingman</a>* World::tree2 = new <a class="el" href="class_wingman.html">Wingman</a>()</td>
+          <td class="memname"><a class="el" href="class_entity.html">Entity</a>* World::Terrain2 = new <a class="el" href="class_entity.html">Entity</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a9a0fa5311d61c9ccda4cfe306c4a0ca5" name="a9a0fa5311d61c9ccda4cfe306c4a0ca5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a0fa5311d61c9ccda4cfe306c4a0ca5">&#9670;&nbsp;</a></span>tree3</h2>
+<a id="a30df3ffd57ab290ba0fe445fda3cba90" name="a30df3ffd57ab290ba0fe445fda3cba90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30df3ffd57ab290ba0fe445fda3cba90">&#9670;&nbsp;</a></span>Wingman1</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_wingman.html">Wingman</a>* World::tree3 = new <a class="el" href="class_wingman.html">Wingman</a>()</td>
+          <td class="memname"><a class="el" href="class_entity.html">Entity</a>* World::Wingman1 = new <a class="el" href="class_player.html">Player</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="acaaf78a76d0f82a51ed75d44d09207bb" name="acaaf78a76d0f82a51ed75d44d09207bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acaaf78a76d0f82a51ed75d44d09207bb">&#9670;&nbsp;</a></span>tree4</h2>
+<a id="a340e0b43ca1edc349b4e26c832efd5a3" name="a340e0b43ca1edc349b4e26c832efd5a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a340e0b43ca1edc349b4e26c832efd5a3">&#9670;&nbsp;</a></span>Wingman2</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_wingman.html">Wingman</a>* World::tree4 = new <a class="el" href="class_wingman.html">Wingman</a>()</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="afd78ca20ed6e5237a9309169a153795e" name="afd78ca20ed6e5237a9309169a153795e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd78ca20ed6e5237a9309169a153795e">&#9670;&nbsp;</a></span>tree5</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_wingman.html">Wingman</a>* World::tree5 = new <a class="el" href="class_wingman.html">Wingman</a>()</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abd3d97e46c3b360785626c657ce7e779" name="abd3d97e46c3b360785626c657ce7e779"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd3d97e46c3b360785626c657ce7e779">&#9670;&nbsp;</a></span>tree6</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_wingman.html">Wingman</a>* World::tree6 = new <a class="el" href="class_wingman.html">Wingman</a>()</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a54e5a606e9c617ab76e21868560afa72" name="a54e5a606e9c617ab76e21868560afa72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54e5a606e9c617ab76e21868560afa72">&#9670;&nbsp;</a></span>wingman1</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_wingman.html">Wingman</a>* World::wingman1 = new <a class="el" href="class_wingman.html">Wingman</a>()</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a51ce2c1839e255bdbb2c377858f50525" name="a51ce2c1839e255bdbb2c377858f50525"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51ce2c1839e255bdbb2c377858f50525">&#9670;&nbsp;</a></span>wingman2</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_wingman.html">Wingman</a>* World::wingman2 = new <a class="el" href="class_wingman.html">Wingman</a>()</td>
+          <td class="memname"><a class="el" href="class_entity.html">Entity</a>* World::Wingman2 = new <a class="el" href="class_player.html">Player</a></td>
         </tr>
       </table>
 </div><div class="memdoc">

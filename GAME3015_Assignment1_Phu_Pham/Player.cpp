@@ -1,3 +1,7 @@
+//GAME3015-Assignment1-PhuPham
+//Name:Phu Pham
+//ID:101250748
+//Last Updated: 11/2/2022
 #include "Player.h"
 
 Player::Player()
@@ -7,7 +11,9 @@ Player::Player()
 Player::~Player()
 {
 }
-
+/// <summary>
+/// Handles player movement
+/// </summary>
 void Player::Update(float DeltaTime, FrameResource* Frame)
 {
 	// W key for moving up

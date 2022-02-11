@@ -1,6 +1,10 @@
+//GAME3015-Assignment1-PhuPham
+//Name:Phu Pham
+//ID:101250748
+//Last Updated: 11/2/2022
 #pragma once
 
-#include "GameInfo.h"
+#include "MiscProperties.h"
 
 class SceneNode
 {

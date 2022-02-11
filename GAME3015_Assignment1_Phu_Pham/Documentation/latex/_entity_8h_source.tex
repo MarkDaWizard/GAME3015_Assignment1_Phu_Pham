@@ -2,23 +2,30 @@
 \label{_entity_8h_source}\index{GAME3015\_Assignment1\_Phu\_Pham/Entity.h@{GAME3015\_Assignment1\_Phu\_Pham/Entity.h}}
 \mbox{\hyperlink{_entity_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
-\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_scene_node_8h}{SceneNode.h}}"{}}}
-\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <memory>}}
-\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_render_item_8h}{RenderItem.h}}"{}}}
-\DoxyCodeLine{5 \textcolor{keyword}{class }\mbox{\hyperlink{class_entity}{Entity}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_scene_node}{SceneNode}}}
-\DoxyCodeLine{6 \{}
-\DoxyCodeLine{7 \textcolor{keyword}{public}:}
-\DoxyCodeLine{8     std::unique\_ptr<RenderItem> \mbox{\hyperlink{class_entity_a4574994fbafa2623db01891db687ff66}{Ritem}};}
-\DoxyCodeLine{9 }
-\DoxyCodeLine{10     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_entity_a472e1690df5fb48c6c7f052e4cb39c78}{setVelocity}}(XMFLOAT3 velocity);}
-\DoxyCodeLine{11     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_entity_a472e1690df5fb48c6c7f052e4cb39c78}{setVelocity}}(\textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y);}
-\DoxyCodeLine{12     XMFLOAT3 \mbox{\hyperlink{class_entity_a4e378e2cd26ade4ab509b675c948a389}{getVelocity}}();}
-\DoxyCodeLine{13 }
-\DoxyCodeLine{14 \textcolor{keyword}{private}:}
-\DoxyCodeLine{15     XMFLOAT3 mVelocity;}
+\DoxyCodeLine{1 \textcolor{comment}{//GAME3015-\/Assignment1-\/PhuPham}}
+\DoxyCodeLine{2 \textcolor{comment}{//Name:Phu Pham}}
+\DoxyCodeLine{3 \textcolor{comment}{//ID:101250748}}
+\DoxyCodeLine{4 \textcolor{comment}{//Last Updated: 11/2/2022}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_scene_node_8h}{SceneNode.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_frame_resource_8h}{FrameResource.h}}"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_entity}{Entity}}  :}
+\DoxyCodeLine{13     \textcolor{keyword}{public} \mbox{\hyperlink{class_scene_node}{SceneNode}}}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{class_world}{World}};}
 \DoxyCodeLine{16 }
-\DoxyCodeLine{17 \};}
-\DoxyCodeLine{18 }
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_entity_a980f368aa07ce358583982821533a54a}{Entity}}();}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}{\string~Entity}}();}
+\DoxyCodeLine{20         }
+\DoxyCodeLine{21 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{22     \textcolor{keywordtype}{float}   \mbox{\hyperlink{class_entity_a11914ab8705e2ae259839b2e46027098}{m\_MoveSpeed}};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_entity_ac4025ea862585a94f6e27cecfae9423e}{Update}}(\textcolor{keywordtype}{float} DeltaTime, \textcolor{keyword}{struct} \mbox{\hyperlink{struct_frame_resource}{FrameResource}}* Frame);}
+\DoxyCodeLine{26     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_entity_acd47026ad7c92f1fbc74aebf6cc21c73}{Draw}}(ID3D12GraphicsCommandList* CmdList, \textcolor{keywordtype}{float} DeltaTime);}
+\DoxyCodeLine{27 \};}
+\DoxyCodeLine{28 }
 
 \end{DoxyCode}
